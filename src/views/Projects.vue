@@ -1,8 +1,10 @@
 <template>
-    <div class="Projects">
-        <Navigation/>
-        <div>
-            {{ json }}
+    <div class="Projects mt-5">
+        <div v-for="(project, index) in json.projects" :key="index">
+            {{ project.name }}
+            <div v-for="(image, imageIndex) in project.images" :key="imageIndex">
+                {{ image.title }}
+            </div>            
         </div>
     </div>
 </template>

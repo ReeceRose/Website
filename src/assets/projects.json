@@ -1,3 +1,22 @@
 {
-    "title": "My Projects"
+    "title": "My Projects",
+    "github_link": "https://github.com/temp",
+    "projects": [
+        { 
+            "name": "temp",
+            "description": "temp",
+            "title": "temp",
+            "open_source": "false",
+            "live_link": "https://temp.com",
+            "source_link": "",
+            "images": [
+                { 
+                    "title": "Temp image",
+                    "description": "temp image",
+                    "link": "https://temp.com/temp.jpg",
+                    "alt": "Temp image"
+                }
+            ]
+        }
+    ]
 }
