@@ -17,5 +17,18 @@ export default {
 
 
 <style lang="scss">
-
+* {
+    padding: 0;
+    margin: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #6c6f73;
+}
 </style>
