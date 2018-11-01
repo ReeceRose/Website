@@ -1,0 +1,105 @@
+<template>
+    <router-link :to="{ name: 'Projects', params: { project : title.replace(' ', '') }}" class="info">
+        <div class="img-container">
+            <img class="img-fluid" :src="display_image" :alt="title">
+            <div class="overlay">
+                <h2>{{title}}</h2>
+                <p>
+                    <router-link :to="{ name: 'Projects', params: { project : title.replace(' ', '') }}" class="info">More information</router-link>
+                </p>
+            </div>
+        </div>
+    </router-link>
+</template>
+
+<script>
+export default {
+    name: 'Project',
+    props: {
+        title: String,
+        display_image: String
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+// Special thanks to https://miketricking.github.io/bootstrap-image-hover/ for the CSS
+.img-container {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    .overlay {
+        position: absolute;
+        overflow: hidden;
+        width: 80%;
+        height: 80%;
+        left: 10%;
+        top: 10%;
+        border-bottom: 1px solid #FFF;
+        border-top: 1px solid #FFF;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0,1);
+        -ms-transform: scale(0,1);
+        transform: scale(0,1);
+    }
+    img {
+        display: block;
+        position: relative;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        background-color: transparent;
+        color: #FFF;
+        padding: 1em 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+
+    a, p {
+        color: #FFF;
+        padding: 1em 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+}
+
+.img-container:hover
+{
+    .overlay {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+    img {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+        filter: brightness(0.6);
+        -webkit-filter: brightness(0.6);
+    }
+    a, p, h2 {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+</style>

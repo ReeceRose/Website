@@ -1,22 +1,49 @@
 {
     "title": "My Projects",
     "github_link": "https://github.com/temp",
-    "projects": [
-        { 
-            "name": "temp",
-            "description": "temp",
-            "title": "temp",
-            "open_source": "false",
-            "live_link": "https://temp.com",
+    "projects": 
+    { 
+        "Project1": {
+            "name": "Project 1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "featured": true,
+            "open_source": false,
+            "live_link": "",
             "source_link": "",
+            "display_image": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg",
+            "images": [
+                { 
+                    "title": "Temp images",
+                    "description": "temp image",
+                    "link": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg"
+                }
+            ]
+        },
+        "Project2": {
+            "name": "Project 2",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://www.lipsum.com/",
+            "source_link": "https://github.com/",
+            "display_image": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg",
             "images": [
                 { 
                     "title": "Temp image",
                     "description": "temp image",
-                    "link": "https://temp.com/temp.jpg",
-                    "alt": "Temp image"
+                    "link": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg"
+                },
+                { 
+                    "title": "Temp image",
+                    "description": "temp image2",
+                    "link": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg"
+                },
+                { 
+                    "title": "Temp image",
+                    "description": "temp image 3",
+                    "link": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg"
                 }
             ]
         }
-    ]
+    }
 }

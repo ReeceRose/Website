@@ -1,21 +1,39 @@
 <template>
-    <div class="Projects mt-5">
-        <div v-for="(project, index) in json.projects" :key="index">
-            {{ project.name }}
-            <div v-for="(image, imageIndex) in project.images" :key="imageIndex">
-                {{ image.title }}
-            </div>            
+    <section id="Project">
+        <div class="svg-background">
+            <div class="container">
+                <div v-if="$route.params.project != null">
+                    <DetailedProject
+                        :project="json.projects[$route.params.project]"
+                    />
+                </div>
+                <div v-else>
+                    <div class="row">
+                        <div v-for="(project, index) in json.projects" :key="index" class="col-4">
+                            <TileProject 
+                                :title="project.name"
+                                :display_image="project.display_image" 
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
 import Navigation from '@/components/Navigation.vue'
+import TileProject from '@/components/TileProject.vue'
+import DetailedProject from '@/components/DetailedProject'
 import Projects from '@/assets/projects.json'
+
 export default {
     name: 'Projects',
     components: {
-        Navigation
+        Navigation,
+        TileProject,
+        DetailedProject
     },
     data () {
         return {
@@ -24,3 +42,12 @@ export default {
     }
 }
 </script>
+
+<style>
+.container {
+    padding-top: 100px;
+}
+.col-4 {
+    padding: 5px;
+}
+</style>
