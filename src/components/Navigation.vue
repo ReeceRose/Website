@@ -1,29 +1,27 @@
 <template>
-    <div class="Navigation">
-        <section id="nav">
-            <nav class="navbar navbar-expand-md fixed-top navbar-dark"> 
-                <router-link class="navbar-brand" to="/">Reece Rose</router-link> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRight">
-                    <span class="navbar-toggler-icon">
+    <section id="Navigation">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark"> 
+            <router-link class="navbar-brand" to="/">Reece Rose</router-link> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRight">
+                <span class="navbar-toggler-icon">
 
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarRight"> 
-                    <ul class="navbar-nav ml-auto"> 
-                        <li class="nav-item"> 
-                            <router-link class="nav-link" to="/#About">About</router-link> 
-                        </li> 
-                        <li class="nav-item"> 
-                            <router-link class="nav-link" to="/Projects">Projects</router-link>
-                        </li> 
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="/#Contact">Contact</a> 
-                        </li> 
-                    </ul>
-                </div> 
-            </nav> 
-        </section>
-    </div>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarRight"> 
+                <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item"> 
+                        <router-link class="nav-link" to="/#About">About</router-link> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <router-link class="nav-link" to="/Projects">Projects</router-link>
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="/#Contact">Contact</a> 
+                    </li> 
+                </ul>
+            </div> 
+        </nav> 
+    </section>
 </template>
 
 <script>
@@ -40,14 +38,15 @@ export default
         .nav-link {
             color: #fff;
             font-size: 1.2em;
+            font-weight: 700;
         }
         .nav-link:hover {
             color: #eee;
         }
     }
     .navbar-brand {
-        font-size: 1.5em;
-        font-weight: 600;
+        font-size: 2em;
+        font-weight: 800;
     }
     .navbar-brand:hover {
         color: #eee;
