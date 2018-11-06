@@ -17,6 +17,11 @@
                     "description": "temp image",
                     "link": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg"
                 }
+            ],
+            "icons": [
+                "fab fa-html5",
+                "fab fa-css3-alt",
+                "fab fa-sass"
             ]
         },
         "Project2": {
@@ -43,6 +48,10 @@
                     "description": "temp image 3",
                     "link": "https://cdn.lynda.com/course/506926/506926-636238695730179167-16x9.jpg"
                 }
+            ],
+            "icons": [
+                "fab fa-html5",
+                "fab fa-css3-alt"
             ]
         }
     }

@@ -1,6 +1,7 @@
 <template>
     <section id="Content" class="svg-background">
-        <div class="container text-center mt-5">
+        <Navigation/>
+        <div class="container text-center mt-3">
             <section id="Header">
                 <div class="main-content ">
                     <div class="row">
@@ -21,8 +22,7 @@
                     </div>
                 </div>
             </section>
-            <section id="About" class="row">
-                <!-- <div class="shadow-lg bg-white col-12"> -->
+            <section id="About" class="row padding-top">
                 <div class="section-background shadow-lg col-12">
                     <h1 class="title">About me</h1>
                     <hr class="hr-blue">
@@ -31,7 +31,7 @@
                     </p>
                 </div>
         </section>
-        <section id="Projects" class="row">
+        <section id="Projects" class="row padding-top">
             <div class="section-background shadow-lg col-12">
                 <h1 class="title">Projects</h1>
                 <FeaturedProjects class="mt-4"/>
@@ -43,17 +43,19 @@
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
 import FeaturedProjects from '@/components/FeaturedProjects.vue'
 export default {
     name: 'Home',
     components: {
+        Navigation,
         FeaturedProjects
     }
 }
 </script>
 
 <style lang="scss" scoped>
-section {
+.padding-top {
     padding-top: 50px;
 }
 
@@ -86,9 +88,5 @@ section {
     .btn {
         margin-top: 25px;
     }
-}
-
-.svg-background {
-    margin-top: -210px;
 }
 </style>

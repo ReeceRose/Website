@@ -1,6 +1,5 @@
 <template>
     <div id="App">
-        <Navigation/>
         <router-view/>
     </div>
 </template>
@@ -45,7 +44,6 @@ body {
     height: 100%;
     width: 100%;
     padding-bottom: 25px;
-    margin-top: -74px;
 }
 .section-background {
     padding-top: 40px !important;

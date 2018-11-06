@@ -1,20 +1,19 @@
 <template>
-    <section id="Project">
-        <div class="svg-background">
-            <div class="container">
-                <div v-if="$route.params.project != null">
-                    <DetailedProject
-                        :project="json.projects[$route.params.project]"
-                    />
-                </div>
-                <div v-else>
-                    <div class="row">
-                        <div v-for="(project, index) in json.projects" :key="index" class="col-4">
-                            <TileProject 
-                                :title="project.name"
-                                :display_image="project.display_image" 
-                            />
-                        </div>
+    <section id="Projects" class="svg-background">
+        <Navigation/>
+        <div class="container">
+            <div v-if="$route.params.project != null && json.projects[$route.params.project] != null">
+                <DetailedProject
+                    :project="json.projects[$route.params.project]"
+                />
+            </div>
+            <div v-else>
+                <div class="row justify-content-center">
+                    <div v-for="(project, index) in json.projects" :key="index" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
+                        <TileProject 
+                            :title="project.name"
+                            :display_image="project.display_image" 
+                        />
                     </div>
                 </div>
             </div>
@@ -43,11 +42,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
     padding-top: 100px;
 }
-.col-4 {
+.projects {
     padding: 5px;
 }
 </style>

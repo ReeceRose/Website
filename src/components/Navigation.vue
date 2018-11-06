@@ -32,6 +32,7 @@ export default
 <style lang="scss">
 .navbar-dark 
 {
+    padding-top: 0;
     .navbar-nav {
         .nav-link {
             color: #fff;
