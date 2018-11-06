@@ -27,12 +27,13 @@ export default {
 html,
 body {
     height: 100%;
+    max-width: 100vw;
 }
 body {
     position: relative;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    color: #6c6f73;
+    color: #22292f;
 }
 .svg-background {
     background-color: #fff;
@@ -41,16 +42,16 @@ body {
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
+    height: 100%;
     width: 100%;
     padding-bottom: 25px;
+    margin-top: -74px;
 }
 .section-background {
-    border-radius: 20px;
-    background-color: rgba(255, 255, 250, 0.7);
-    // background-color: rgba(254, 216, 183, 0.85);
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    background-color: rgba(255, 255, 250, 1);
     padding: 20px;
-    // Add this for mobile
-    // max-width: 95%;
 }
 .title {
     font-weight: 700;

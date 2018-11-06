@@ -4,6 +4,7 @@
             <img class="img-fluid" :src="project.display_image" :alt="project.name">
             <h1 class="title">{{ project.name }}</h1>
             <p class="description">{{ project.description }}</p>
+            <!-- Add icons -->
             <a v-if="project.live_link != ''"  :href="project.live_link" class="btn btn-primary" target="_blank">Demo</a>
             <a v-else class="btn btn-primary disabled white">Demo not available</a>
             <a v-if="project.open_source" :href="project.source_link" target="_blank">

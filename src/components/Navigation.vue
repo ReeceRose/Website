@@ -1,11 +1,9 @@
 <template>
     <section id="Navigation">
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark"> 
+        <nav class="navbar navbar-expand-md navbar-dark"> 
             <router-link class="navbar-brand" to="/">Reece Rose</router-link> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRight">
-                <span class="navbar-toggler-icon">
-
-                </span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarRight"> 
                 <ul class="navbar-nav ml-auto"> 
@@ -13,10 +11,10 @@
                         <router-link class="nav-link" to="/#About">About</router-link> 
                     </li> 
                     <li class="nav-item"> 
-                        <router-link class="nav-link" to="/Projects">Projects</router-link>
+                        <router-link class="nav-link" to="/#Projects">Projects</router-link>
                     </li> 
                     <li class="nav-item"> 
-                        <a class="nav-link" href="/#Contact">Contact</a> 
+                        <router-link class="nav-link" to="/#Contact">Contact</router-link>
                     </li> 
                 </ul>
             </div> 
@@ -51,5 +49,9 @@ export default
     .navbar-brand:hover {
         color: #eee;
     }
+}
+
+.navbar-dark.scrolled{
+    background:#000;
 }
 </style>

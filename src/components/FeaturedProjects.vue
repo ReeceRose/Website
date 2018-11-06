@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row justify-content-center">
         <div v-for="(project, index) in json.projects" :key="index" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
             <Project
                 v-if="project.featured"

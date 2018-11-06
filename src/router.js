@@ -7,6 +7,12 @@ Vue.use(Router)
 
 export default new Router({
     mode: 'history',
+    scrollBehavior(to) {
+        if (to.hash) {
+            return window.scrollTo({ top: document.querySelector(to.hash).offsetTop, behavior: 'smooth' });
+        }
+        return window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
     routes: [
         {
             path: '/',

@@ -1,6 +1,6 @@
 <template>
     <router-link :to="{ name: 'Projects', params: { project : title.replace(' ', '') }}" class="info">
-        <div class="img-container">
+        <div class="img-container shadow">
             <img class="img-fluid" :src="display_image" :alt="title">
             <div class="overlay">
                 <h2>{{title}}</h2>
