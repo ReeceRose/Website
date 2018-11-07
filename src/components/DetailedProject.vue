@@ -23,7 +23,7 @@
             <h4>Technologies used</h4>
             <div class="row justify-content-center">
                 <span v-for="(icon, iconIndex) in project.icons" :key="iconIndex" class="icons" :title="icon.name">
-                    <i :class="icon.faIcon" class="fa-2x"></i>
+                    <i :class="icon.faIcon" class="fa-2x fa-fw"></i>
                 </span>
             </div>
             <h4>Images</h4>

@@ -10,15 +10,13 @@
                     <div class="row">
                         <h4 class="motto col-12">Full stack developer</h4>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="https://github.com/reecerose" target="_blank" class="icon">
-                                <i class="fab fa-github icon fa-3x"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" target="_blank" class="icon">
-                                <i class="fab fa-linkedin-in fa-3x"></i>
-                            </a>
-                        </div>
+                    <div class="row justify-content-center">
+                        <a href="https://github.com/reecerose" target="_blank" class="icon">
+                            <i class="fab fa-github icon fa-3x fa-fw"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" target="_blank" class="icon">
+                            <i class="fab fa-linkedin-in fa-3x fa-fw"></i>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -71,7 +69,7 @@ export default {
 }
 
 .icon {
-    padding: 0 15px 0 15px;
+    padding: 0 10px;
     text-decoration: none;
     color: #22292f;
 }
