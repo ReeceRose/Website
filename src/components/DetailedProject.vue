@@ -23,6 +23,7 @@
             <h4>Technologies used</h4>
             <div class="row justify-content-center">
                 <span v-for="(icon, iconIndex) in project.icons" :key="iconIndex" class="icons" :title="icon.name">
+                    <div class="iconName">{{icon.name}}</div>
                     <i :class="icon.faIcon" class="fa-2x fa-fw"></i>
                 </span>
             </div>
@@ -55,10 +56,16 @@ export default {
 }
 .icons {
     padding: 0 10px 25px 10px;
-
+    
+    .iconName {
+        visibility: hidden;
+    }
 }
 .icons:hover {
     color: #4a91f2;
+}
+.icons:hover > .iconName {
+    visibility: visible;
 }
 .extra-padding{
     padding: 5px 0 25px 0;
