@@ -1,0 +1,35 @@
+{
+    "projects": 
+    {
+        "WeatherApp": {
+            "name": "Weather App",
+            "description": "Coming soon!",
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://github.com/ReeceRose",
+            "source_link": "https://github.com/ReeceRose",
+            "display_image": "https://metrouk2.files.wordpress.com/2018/02/ios_weather_icons-e1519660727179.png",
+            "images": [
+                { 
+                    "title": "",
+                    "description": "",
+                    "link": ""
+                }
+            ],
+            "icons": [
+                {
+                    "name": "HTML",
+                    "faIcon": "fab fa-html5"
+                },                
+                {
+                    "name": "Vue",
+                    "faIcon": "fab fa-vuejs"
+                },
+                {
+                    "name": "SASS",
+                    "faIcon": "fab fa-sass"
+                }
+            ]
+        }
+    }
+}

@@ -1,16 +1,104 @@
 <template>
-    <div class="Home">
+    <section id="Content" class="svg-background">
         <Navigation/>
-    </div>
+        <div class="container text-center">
+            <section id="Header">
+                <div class="main-content ">
+                    <div class="row">
+                        <h1 class="name col-12">Reece Rose</h1>
+                    </div>
+                    <div class="row">
+                        <h4 class="motto col-12">Full stack developer</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="https://github.com/reecerose" target="_blank" class="icon">
+                                <i class="fab fa-github icon fa-3x"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" target="_blank" class="icon">
+                                <i class="fab fa-linkedin-in fa-3x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="About" class="row padding-top">
+                <div class="section-background shadow-lg col-12">
+                    <h1 class="title">About me</h1>
+                    <hr>
+                    <p class="description">
+                        My name is Reece Rose and I am a full-time student at Sheridan College who specializes in creating dynamic and beautiful websites.
+                        Check out some of my projects below to see what I have been up to lately.
+                    </p>
+                </div>
+            </section>
+            <section id="Projects" class="row padding-top">
+                <div class="section-background shadow-lg col-12">
+                    <h1 class="title">Projects</h1>
+                    <hr>
+                    <FeaturedProjects class="mt-4"/>
+                    <router-link to="/Projects" class="btn btn-lg btn-primary">View all my projects</router-link>
+                </div>
+            </section>
+            <section id="Contact" class="row padding-top">
+                <div class="section-background col-12">
+                    <h1 class="title">Contact Me</h1>
+                    <hr>
+                    <p class="description">
+                        Need to contact me? Email me at <a href="mailto:reecerose18@gmail.com">reecerose18@gmail.com</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
 </template>
 
 <script>
-
-import Navigation from '@/components/Navigation.vue'
+import Navigation from '@/components/Navigation'
+import FeaturedProjects from '@/components/FeaturedProjects.vue'
 export default {
     name: 'Home',
     components: {
-        Navigation
+        Navigation,
+        FeaturedProjects
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.padding-top {
+    padding-top: 50px;
+}
+
+.icon {
+    padding: 0 15px 0 15px;
+    text-decoration: none;
+    color: #22292f;
+}
+.icon:hover {
+    color: #4e5358;
+}
+
+#Content {
+    display: block;
+    .main-content {
+        text-align: center;
+        color: #22292f;
+
+        .name {
+            font-weight: 800;
+            font-size: 3.5em;
+            padding-bottom: 30px;
+        }
+        .motto {
+            font-weight: 600;
+            padding-bottom: 25px;
+        }
+    }
+}
+#Projects {
+    .btn {
+        margin-top: 25px;
+    }
+}
+</style>
