@@ -1,7 +1,7 @@
 <template>
     <section id="Content" class="svg-background">
         <Navigation/>
-        <div class="container text-center mt-3">
+        <div class="container text-center">
             <section id="Header">
                 <div class="main-content ">
                     <div class="row">

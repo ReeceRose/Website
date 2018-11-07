@@ -17,11 +17,18 @@ export default new Router({
     routes: [
         {
             path: '/',
+            name: 'Home',
             component: Home
         },
         {
-            path: '/Projects/:project?',
-            component: Projects
+            path: '/Projects',
+            name: 'Projects',
+            component: Projects,
+            children: [
+                {
+                    path: ':project?'
+                }
+            ]
         },
         { 
             path: '/Error',

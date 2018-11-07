@@ -54,7 +54,8 @@ export default {
         text-transform: uppercase;
         text-align: center;
         position: relative;
-        font-size: 17px;
+        font-size: 30px;
+        font-weight: 600;
         background-color: transparent;
         color: #FFF;
         padding: 1em 0;

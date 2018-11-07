@@ -22,8 +22,8 @@
             </div>
             <h4>Technologies used</h4>
             <div class="row justify-content-center">
-                <span v-for="(icon, iconIndex) in project.icons" :key="iconIndex" class="icons">
-                    <i :class="icon" class="fa-2x"></i>
+                <span v-for="(icon, iconIndex) in project.icons" :key="iconIndex" class="icons" :title="icon.name">
+                    <i :class="icon.faIcon" class="fa-2x"></i>
                 </span>
             </div>
             <h4>Images</h4>
@@ -55,6 +55,10 @@ export default {
 }
 .icons {
     padding: 0 10px 25px 10px;
+
+}
+.icons:hover {
+    color: #4a91f2;
 }
 .extra-padding{
     padding: 5px 0 25px 0;
