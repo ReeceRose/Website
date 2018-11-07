@@ -1,8 +1,8 @@
 # ReeceRose
-Want to see this code in action? Visit <a href="http://reecerose.com/" target="_blank">here</a>
+Want to see this code in action? Visit [here](http://reecerose.com)
 
 ## About
-This is a portfolio website I am using to showcase various different projects I have made/am currently making. I am using Vue.js as my front-end framework and using a JSON file to host my project information. The website is hosted on <a href="http://hostupon.ca/" target="_blank">HostUpon</a> and is also hosted on Azure static websites for free!! <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website" target="_blank">Click here</a> for more information on Azure's static websites.
+This is a portfolio website I am using to showcase various different projects I have made/am currently making. I am using Vue.js as my front-end framework and using a JSON file to host my project information. The website is hosted on [HostUpon](https://hostupon.ca) and is also hosted on Azure static websites for free!! [Click here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website) for more information on Azure's static websites.
 
 ## Setup
 Want to setup, run, and modify my website locally? Follow these instructions
@@ -19,4 +19,4 @@ npm run build
 ```
 
 ## Questions
-Have any questions? Ask me them <a href="http://reecerose.com/#Contact" target="_blank">here</a>
+Have any questions? Ask me them [here](http://reecerose.com/#Contact)
