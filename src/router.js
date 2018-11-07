@@ -9,6 +9,9 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     scrollBehavior(to) {
+        if (to.name == 'Projects')  {
+            return { x:0, y:0 }
+        }
         if (to.hash) {
             return window.scrollTo({ top: document.querySelector(to.hash).offsetTop, behavior: 'smooth' });
         }
