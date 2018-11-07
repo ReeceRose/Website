@@ -4,9 +4,6 @@
             <img class="img-fluid" :src="display_image" :alt="title">
             <div class="overlay">
                 <h2>{{title}}</h2>
-                <p>
-                    <router-link :to="{ name: 'Projects', params: { project : title.replace(' ', '') }}" class="info">More information</router-link>
-                </p>
             </div>
         </div>
     </router-link>
@@ -68,17 +65,6 @@ export default {
         -webkit-transform: translate3d(0,-100%,0);
         transform: translate3d(0,-100%,0);
     }
-
-    a, p {
-        color: #FFF;
-        padding: 1em 0;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: translate3d(0,100%,0);
-        transform: translate3d(0,100%,0);
-    }
 }
 
 .img-container:hover
@@ -95,7 +81,7 @@ export default {
         filter: brightness(0.6);
         -webkit-filter: brightness(0.6);
     }
-    a, p, h2 {
+    h2 {
         opacity: 1;
         filter: alpha(opacity=100);
         -webkit-transform: translate3d(0,0,0);

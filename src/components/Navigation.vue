@@ -35,24 +35,21 @@ export default
     padding-top: 0;
     .navbar-nav {
         .nav-link {
-            color: #fff;
+            color: #22292f;
             font-size: 1.2em;
             font-weight: 700;
         }
         .nav-link:hover {
-            color: #eee;
+            color: #4e5358;
         }
     }
     .navbar-brand {
         font-size: 2em;
         font-weight: 800;
+        color: #22292f;
     }
     .navbar-brand:hover {
-        color: #eee;
+        color: #4e5358;
     }
-}
-
-.navbar-dark.scrolled{
-    background:#000;
 }
 </style>
