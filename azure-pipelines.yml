@@ -21,7 +21,7 @@ steps:
   displayName: AzureBlob File Copy
   inputs:
     SourcePath: /dist
-    azureSubscription: 'Free (bf15b27c-5d5d-4ed5-b5c8-9b8ce6198747)'
+    azureSubscription: 'Free ( bf15b27c-5d5d-4ed5-b5c8-9b8ce6198747 )'
     Destination: AzureBlob
     storage: reecerosewebsite
     ContainerName: '$web'
