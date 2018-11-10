@@ -20,3 +20,5 @@ npm run build
 
 ## Questions
 Have any questions? Ask me them [here](http://reecerose.com/#Contact)
+
+[![Build Status](https://dev.azure.com/ReeceRose18/ReeceRose/_apis/build/status/ReeceRose.Website)](https://dev.azure.com/ReeceRose18/ReeceRose/_build/latest?definitionId=1)
