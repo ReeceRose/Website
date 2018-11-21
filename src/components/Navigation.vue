@@ -42,6 +42,9 @@ export default
         .nav-link:hover {
             color: #4e5358;
         }
+        .nav-link:focus {
+            color: inherit;
+        }
     }
     .navbar-brand {
         font-size: 2em;
@@ -50,6 +53,9 @@ export default
     }
     .navbar-brand:hover {
         color: #4e5358;
+    }
+    .navbar-brand:focus {
+        color: inherit;
     }
 }
 </style>
