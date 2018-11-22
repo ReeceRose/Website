@@ -30,17 +30,21 @@ export default
 </script>
 
 <style lang="scss">
+$color: (
+    main: #22292f,
+    hover: #4e5358
+);
 .navbar-dark 
 {
     padding-top: 0;
     .navbar-nav {
         .nav-link {
-            color: #22292f;
+            color: map-get($map: $color, $key: main);
             font-size: 1.2em;
             font-weight: 700;
         }
         .nav-link:hover {
-            color: #4e5358;
+            color: map-get($map: $color, $key: hover);
         }
         .nav-link:focus {
             color: inherit;
@@ -49,10 +53,10 @@ export default
     .navbar-brand {
         font-size: 2em;
         font-weight: 800;
-        color: #22292f;
+        color: map-get($map: $color, $key: main);
     }
     .navbar-brand:hover {
-        color: #4e5358;
+        color: map-get($map: $color, $key: hover);
     }
     .navbar-brand:focus {
         color: inherit;

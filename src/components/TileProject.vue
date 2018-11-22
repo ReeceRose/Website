@@ -31,6 +31,7 @@ export default {
 
     .overlay {
         position: absolute;
+        background: rgba(#4a91f2, 0.65);
         overflow: hidden;
         width: 80%;
         height: 80%;
@@ -45,6 +46,9 @@ export default {
         transform: scale(0,1);
     }
     img {
+        background-size: cover;
+        height: inherit;
+        width: inherit;
         display: block;
         position: relative;
         -webkit-transition: all 0.35s;
@@ -71,8 +75,8 @@ export default {
 .img-container:hover
 {
     .overlay {
-        opacity: 1;
-        filter: alpha(opacity=100);
+        opacity: 50;
+        filter: alpha(opacity=50);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);

@@ -30,6 +30,40 @@
                     "faIcon": "fab fa-sass"
                 }
             ]
+        },
+        "JWTExample": {
+            "name": "JWT Example",
+            "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.1 backend, Vue.JS frontend. More info coming soon",
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://jwt.reecerose.com/",
+            "source_link": "https://github.com/ReeceRose/JWT-FullStack-Example/",
+            "display_image": "https://static.reecerose.com/images/projects/JWTExample/logo.png",
+            "images": [
+                { 
+                    "title": "",
+                    "description": "",
+                    "link": ""
+                }
+            ],
+            "icons": [
+                {
+                    "name": "HTML",
+                    "faIcon": "fab fa-html5"
+                },                
+                {
+                    "name": "Vue",
+                    "faIcon": "fab fa-vuejs"
+                },
+                {
+                    "name": "SASS",
+                    "faIcon": "fab fa-sass"
+                },
+                {
+                    "name": "Docker",
+                    "faIcon": "fab fa-docker"
+                }
+            ]
         }
     }
 }

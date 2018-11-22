@@ -24,14 +24,9 @@ export default new Router({
             component: Home
         },
         {
-            path: '/Projects',
+            path: '/Projects/:project?',
             name: 'Projects',
-            component: Projects,
-            children: [
-                {
-                    path: ':project?'
-                }
-            ]
+            component: Projects
         },
         { 
             path: '/Error',
