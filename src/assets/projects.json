@@ -1,7 +1,7 @@
 {
     "projects": 
     {
-        "WeatherApp": {
+        "weatherapp": {
             "name": "Weather App",
             "description": "Coming soon!",
             "featured": true,
@@ -31,7 +31,7 @@
                 }
             ]
         },
-        "JWTExample": {
+        "jwtexample": {
             "name": "JWT Example",
             "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.1 backend, Vue.JS frontend. More info coming soon",
             "featured": true,

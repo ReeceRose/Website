@@ -2,9 +2,9 @@
     <section id="Projects" class="svg-background">
         <Navigation/>
         <div class="container">
-            <div v-if="$route.params.project != null && json.projects[$route.params.project] != null">
+            <div v-if="String($route.params.project).toLowerCase() != null && json.projects[String($route.params.project).toLowerCase()] != null">
                 <DetailedProject
-                    :project="json.projects[$route.params.project]"
+                    :project="json.projects[String($route.params.project).toLowerCase()]"
                 />
             </div>
             <div v-else class="section-background text-center">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>}
     </section>
 </template>
 
