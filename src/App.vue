@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/colors.scss";
+@import "@/assets/functions.scss";
+
 * {
     padding: 0;
     margin: 0;

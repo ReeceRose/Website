@@ -30,36 +30,38 @@ export default
 </script>
 
 <style lang="scss">
-$color: (
-    main: #22292f,
-    hover: #4e5358
-);
+@import "@/assets/colors.scss";
+@import "@/assets/functions.scss";
+
 .navbar-dark 
 {
     padding-top: 0;
     .navbar-nav {
         .nav-link {
-            color: map-get($map: $color, $key: main);
+            color: get-color(mainText);
             font-size: 1.2em;
             font-weight: 700;
-        }
-        .nav-link:hover {
-            color: map-get($map: $color, $key: hover);
-        }
-        .nav-link:focus {
-            color: inherit;
+
+            &:hover {
+                color: get-color(mainTextHover);
+            }
+
+            &:focus {
+                color: inherit;
+            }
         }
     }
     .navbar-brand {
         font-size: 2em;
         font-weight: 800;
-        color: map-get($map: $color, $key: main);
-    }
-    .navbar-brand:hover {
-        color: map-get($map: $color, $key: hover);
-    }
-    .navbar-brand:focus {
-        color: inherit;
+        color: get-color(mainText);
+
+        &:hover {
+            color: get-color(mainTextHover);
+        }
+        &:focus {
+            color: inherit;
+        }
     }
 }
 </style>

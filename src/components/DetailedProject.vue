@@ -47,6 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/colors.scss";
+@import "@/assets/functions.scss";
 .title {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -60,12 +62,14 @@ export default {
     .iconName {
         visibility: hidden;
     }
-}
-.icons:hover {
-    color: #4a91f2;
-}
-.icons:hover > .iconName {
-    visibility: visible;
+
+    &:hover {
+        color: get-color(primaryBlue);
+    }
+
+    &:hover > .iconName {
+        visibility: visible;
+    }
 }
 .extra-padding{
     padding: 5px 0 25px 0;

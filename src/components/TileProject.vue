@@ -20,7 +20,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Special thanks to https://miketricking.github.io/bootstrap-image-hover/ for the CSS
+@import "@/assets/colors.scss";
+@import "@/assets/functions.scss";
+
 .img-container {
     width: 100%;
     height: 100%;
@@ -28,6 +30,27 @@ export default {
     overflow: hidden;
     position: relative;
     text-align: center;
+
+    &:hover {
+        .overlay {
+            opacity: 50;
+            filter: alpha(opacity=50);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        img {
+            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+            filter: brightness(0.6);
+            -webkit-filter: brightness(0.6);
+        }
+        h2 {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+    }
 
     .overlay {
         position: absolute;
@@ -69,28 +92,6 @@ export default {
         transition: opacity 0.35s, transform 0.35s;
         -webkit-transform: translate3d(0,-100%,0);
         transform: translate3d(0,-100%,0);
-    }
-}
-
-.img-container:hover
-{
-    .overlay {
-        opacity: 50;
-        filter: alpha(opacity=50);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-    }
-    img {
-        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-        filter: brightness(0.6);
-        -webkit-filter: brightness(0.6);
-    }
-    h2 {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
     }
 }
 </style>

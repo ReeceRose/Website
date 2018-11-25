@@ -64,6 +64,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/colors.scss";
+@import "@/assets/functions.scss";
+
 .padding-top {
     padding-top: 50px;
 }
@@ -71,17 +74,18 @@ export default {
 .icon {
     padding: 0 10px;
     text-decoration: none;
-    color: #22292f;
-}
-.icon:hover {
-    color: #4e5358;
+    color: get-color(mainText);
+
+    &:hover {
+        color: get-color(mainTextHover);
+    }
 }
 
 #Content {
     display: block;
     .main-content {
         text-align: center;
-        color: #22292f;
+        color: get-color(mainText);
 
         .name {
             font-weight: 800;
