@@ -3,7 +3,7 @@
         <Navigation/>
         <div class="container text-center">
             <section id="Header">
-                <div class="main-content ">
+                <div class="main-content">
                     <div class="row">
                         <h1 class="name col-12">Reece Rose</h1>
                     </div>
@@ -52,13 +52,22 @@
 </template>
 
 <script>
+import ScrollReveal from 'scrollreveal'
+
 import Navigation from '@/components/Navigation'
 import FeaturedProjects from '@/components/FeaturedProjects.vue'
+
 export default {
     name: 'Home',
     components: {
         Navigation,
         FeaturedProjects
+    },
+    mounted() {
+        ScrollReveal().reveal('#Header', {delay: 500, distance: '75px', duration: 1000});
+        ScrollReveal().reveal('#About', {delay: 750, distance: '50px', duration: 2500});
+        ScrollReveal().reveal('#Projects', {delay: 1000, distance: '75px', duration: 3500});
+        ScrollReveal().reveal('#Contact', {delay: 500, distance: '25px', duration: 2000});
     }
 }
 </script>
