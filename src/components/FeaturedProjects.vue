@@ -32,7 +32,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/colors.scss";
-@import "@/assets/functions.scss";
 
 .projects {
     padding: 5px;

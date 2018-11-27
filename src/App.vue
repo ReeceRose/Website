@@ -19,11 +19,14 @@ export default {
 
 <style lang="scss">
 @import "@/assets/colors.scss";
-@import "@/assets/functions.scss";
 
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #22292f;
 }
 html,
 body {
@@ -32,9 +35,6 @@ body {
 }
 body {
     position: relative;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    color: #22292f;
 }
 .svg-background {
     background-color: #fff;

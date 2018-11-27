@@ -3,3 +3,8 @@ $colors: (
     mainTextHover: #4e5358,
     primaryBlue: #4a91f2
 );
+
+@function get-color($color-name)
+{
+    @return map-get($map: $colors, $key: $color-name)
+}

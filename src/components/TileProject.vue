@@ -21,7 +21,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/colors.scss";
-@import "@/assets/functions.scss";
 
 .img-container {
     width: 100%;

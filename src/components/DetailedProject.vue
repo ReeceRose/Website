@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/colors.scss";
-@import "@/assets/functions.scss";
+
 .title {
     margin-top: 25px;
     margin-bottom: 25px;

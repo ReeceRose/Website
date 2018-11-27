@@ -65,7 +65,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/colors.scss";
-@import "@/assets/functions.scss";
 
 .padding-top {
     padding-top: 50px;

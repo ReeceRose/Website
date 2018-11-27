@@ -31,7 +31,6 @@ export default
 
 <style lang="scss">
 @import "@/assets/colors.scss";
-@import "@/assets/functions.scss";
 
 .navbar-dark 
 {
