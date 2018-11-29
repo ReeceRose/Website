@@ -3,17 +3,22 @@
     {
         "weatherapp": {
             "name": "Weather App",
-            "description": "Coming soon!",
+            "description": "Simple weather application made using VueJS. The application will use a previously set location or the default of Toronto and use a public API to grab current weather and forecasted weather. The main focus of this project was to demonstrate the basic use of calling APIs, storing information using Vuex, and to make a responsive site using no CSS libraries.",
             "featured": true,
             "open_source": true,
-            "live_link": "https://github.com/ReeceRose",
-            "source_link": "https://github.com/ReeceRose",
-            "display_image": "https://metrouk2.files.wordpress.com/2018/02/ios_weather_icons-e1519660727179.png",
+            "live_link": "https://weatherapp.reecerose.com",
+            "source_link": "https://github.com/ReeceRose/WeatherApp",
+            "display_image": "https://static.reecerose.com/images/projects/WeatherApp/logo.gif",
             "images": [
                 { 
-                    "title": "",
-                    "description": "",
-                    "link": ""
+                    "title": "Forecasted weather",
+                    "description": "Forecasted weather",
+                    "link": "https://static.reecerose.com/images/projects/WeatherApp/forecastedWeather.png"
+                },
+                {
+                    "title": "Updated location is invalid",
+                    "description": "Updated location is invalid",
+                    "link": "https://static.reecerose.com/images/projects/WeatherApp/invalidLocation.png"
                 }
             ],
             "icons": [
