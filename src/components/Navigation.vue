@@ -2,7 +2,7 @@
     <section id="Navigation">
         <nav class="navbar navbar-expand-md navbar-dark"> 
             <router-link class="navbar-brand" to="/">Reece Rose</router-link> 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRight">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRight" value="Navigation bar toggler" aria-label="Navigation bar toggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarRight"> 

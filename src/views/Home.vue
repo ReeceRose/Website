@@ -11,10 +11,10 @@
                         <h4 class="motto col-12">Full stack developer</h4>
                     </div>
                     <div class="row justify-content-center">
-                        <a href="https://github.com/reecerose" target="_blank" class="icon">
+                        <a href="https://github.com/reecerose" rel="noreferrer" target="_blank" class="icon" aria-hidden="true">
                             <i class="fab fa-github icon fa-3x fa-fw"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" target="_blank" class="icon">
+                        <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" rel="noreferrer" target="_blank" class="icon" aria-hidden="true">
                             <i class="fab fa-linkedin-in fa-3x fa-fw"></i>
                         </a>
                     </div>
@@ -35,7 +35,7 @@
                     <h1 class="title">Projects</h1>
                     <hr>
                     <FeaturedProjects class="mt-4"/>
-                    <router-link to="/Projects" class="btn btn-lg btn-primary">View all my projects</router-link>
+                    <router-link to="/Projects" class="btn btn-lg btn-blue">View all my projects</router-link>
                 </div>
             </section>
             <section id="Contact" class="row padding-top">
@@ -43,7 +43,7 @@
                     <h1 class="title">Contact Me</h1>
                     <hr>
                     <p class="description">
-                        Need to contact me? Email me at <a href="mailto:reecerose18@gmail.com">reecerose18@gmail.com</a>
+                        Need to contact me? Email me at <a href="mailto:reecerose18@gmail.com" class="text-blue">reecerose18@gmail.com</a>
                     </p>
                 </div>
             </section>
@@ -109,6 +109,16 @@ export default {
 #Projects {
     .btn {
         margin-top: 25px;
+    }
+    .btn-blue {
+        background-color: get-color(primaryBlue) !important;
+        color: #fff;
+    }
+}
+
+#Contact {
+    .text-blue {
+        color: get-color(primaryBlue)
     }
 }
 </style>
