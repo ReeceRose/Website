@@ -11,11 +11,11 @@
                         <h4 class="motto col-12">Full stack developer</h4>
                     </div>
                     <div class="row justify-content-center">
-                        <a href="https://github.com/reecerose" rel="noreferrer" target="_blank" class="icon" aria-hidden="true">
+                        <a href="https://github.com/reecerose" rel="noreferrer" target="_blank" class="icon-link" aria-hidden="true">
                             <i class="fab fa-github icon fa-3x fa-fw"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" rel="noreferrer" target="_blank" class="icon" aria-hidden="true">
-                            <i class="fab fa-linkedin-in fa-3x fa-fw"></i>
+                        <a href="https://www.linkedin.com/in/reece-rose-5b2864116/" rel="noreferrer" target="_blank" class="icon-link" aria-hidden="true">
+                            <i class="fab fa-linkedin-in icon fa-3x fa-fw"></i>
                         </a>
                     </div>
                 </div>
@@ -79,14 +79,15 @@ export default {
     padding-top: 50px;
 }
 
-.icon {
+.icon-link {
     padding: 0 10px;
     text-decoration: none;
     color: get-color(mainText);
 
-    &:hover {
+    .icon:hover {
         color: get-color(mainTextHover);
     }
+
 }
 
 #Content {
