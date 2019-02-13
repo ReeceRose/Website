@@ -11,7 +11,7 @@
                         <router-link class="nav-link" to="/#About">About</router-link> 
                     </li> 
                     <li class="nav-item"> 
-                        <router-link class="nav-link" to="/#Projects">Projects</router-link>
+                        <router-link class="nav-link" :to="this.$route.name == 'Home' ? '/#Projects' : '/Projects'">Projects</router-link>
                     </li> 
                     <li class="nav-item"> 
                         <router-link class="nav-link" to="/#Contact">Contact</router-link>

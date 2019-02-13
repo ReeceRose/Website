@@ -36,19 +36,78 @@
                 }
             ]
         },
-        "jwtexample": {
-            "name": "JWT Example",
-            "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.1 backend, Vue.JS frontend. More info coming soon",
+        "easylist": {
+            "name": "EasyList",
+            "description": "Ad posting mobile application created using Flutter",
             "featured": true,
             "open_source": true,
-            "live_link": "https://jwt.reecerose.com/",
-            "source_link": "https://github.com/ReeceRose/JWT-FullStack-Example/",
-            "display_image": "https://static.reecerose.com/images/projects/JWTExample/logo.png",
+            "live_link": "https://github.com/ReeceRose/EasyList",
+            "source_link": "https://github.com/ReeceRose/EasyList",
+            "display_image": "https://static.reecerose.com/images/projects/easylist/main.gif",
             "images": [
                 { 
                     "title": "",
                     "description": "",
                     "link": ""
+                }
+            ],
+            "icons": [
+                {
+                    "name": "Flutter",
+                    "faIcon": "fab fa-google"
+                },                
+                {
+                    "name": "Firebase",
+                    "faIcon": "fas fa-fire"
+                },
+                {
+                    "name": "Android",
+                    "faIcon": "fab fa-android"
+                },
+                {
+                    "name": "iOS",
+                    "faIcon": "fab fa-apple"
+                }
+            ]
+        },
+        "jwtexample": {
+            "name": "JWT Example",
+            "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.2 backend, Vue.JS frontend. This is a template project which will be used to rapdily develop further portfolio projects",
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://jwt.reecerose.com/",
+            "source_link": "https://github.com/ReeceRose/JWT-FullStack-Example/",
+            "display_image": "https://static.reecerose.com/images/projects/JWTExample/search.gif",
+            "images": [
+                { 
+                    "title": "Home page",
+                    "description": "Home page (no authentication required)",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/home.png"
+                },
+                { 
+                    "title": "Admin dashboard",
+                    "description": "Preview of admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/adminDashboard.png"
+                },
+                { 
+                    "title": "Pagination support",
+                    "description": "Pagination of users on admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/pagination.png"
+                },
+                { 
+                    "title": "Login page",
+                    "description": "Login page",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/login.png"
+                },
+                { 
+                    "title": "Register page",
+                    "description": "Register page",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/register.png"
+                },
+                {
+                    "title": "Detailed user",
+                    "description": "Preview of a detailed user",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/detailedUser.png"
                 }
             ],
             "icons": [
