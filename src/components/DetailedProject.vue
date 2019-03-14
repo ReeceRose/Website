@@ -8,6 +8,9 @@
                 <a v-if="project.live_link != ''"  :href="project.live_link" class="btn btn-primary" target="_blank">Demo</a>
                 <a v-else class="btn btn-primary disabled white">Demo not available</a>
             </div>
+            <div class="row justify-content-center pt-2">
+                <a v-if="project.trello_link != ''"  :href="project.trello_link" class="btn btn-primary" target="_blank">Trello</a>
+            </div>
             <div class="row justify-content-center">
                 <div class="extra-padding">
                     <a v-if="project.open_source" :href="project.source_link" target="_blank">

@@ -8,6 +8,7 @@
             "open_source": true,
             "live_link": "https://weatherapp.reecerose.com",
             "source_link": "https://github.com/ReeceRose/WeatherApp",
+            "trello_link": "",
             "display_image": "https://static.reecerose.com/images/projects/WeatherApp/logo.gif",
             "images": [
                 { 
@@ -41,8 +42,9 @@
             "description": "Ad posting mobile application created using Flutter",
             "featured": true,
             "open_source": true,
-            "live_link": "https://github.com/ReeceRose/EasyList",
+            "live_link": "",
             "source_link": "https://github.com/ReeceRose/EasyList",
+            "trello_link": "",
             "display_image": "https://static.reecerose.com/images/projects/easylist/main.gif",
             "images": [
                 { 
@@ -77,6 +79,7 @@
             "open_source": true,
             "live_link": "https://jwt.reecerose.com/",
             "source_link": "https://github.com/ReeceRose/JWT-FullStack-Example/",
+            "trello_link": "",
             "display_image": "https://static.reecerose.com/images/projects/JWTExample/search.gif",
             "images": [
                 { 
