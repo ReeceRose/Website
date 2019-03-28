@@ -6,7 +6,7 @@
             "description": "Simple weather application made using VueJS. The application will use a previously set location or the default of Toronto and use a public API to grab current weather and forecasted weather. The main focus of this project was to demonstrate the basic use of calling APIs, storing information using Vuex, and to make a responsive site using no CSS libraries.",
             "featured": true,
             "open_source": true,
-            "live_link": "https://weatherapp.reecerose.com",
+            "live_link": "https://weather.reecerose.com",
             "source_link": "https://github.com/ReeceRose/WeatherApp",
             "trello_link": "",
             "display_image": "https://static.reecerose.com/images/projects/WeatherApp/logo.gif",
