@@ -32,8 +32,8 @@
             </div>
             <h4>Images</h4>
             <div class="row p-3">
-                <div v-for="(image, index) in project.images" :key="index" class="col-lg-3 col-md-4 col-sm-6 pb-4 projects">
-                    <img :src="image.link" :alt="image.title" :title="image.description" class="img-fluid rounded" @click="toggleModal(index)">
+                <div v-for="(image, index) in project.images" :key="index" class="col-lg-3 col-md-4 col-sm-6 pb-4 projects border pointer" @click="toggleModal(index)">
+                    <img :src="image.link" :alt="image.title" :title="image.description" class="img-fluid rounded">
                 </div>
                 <div class="modal" v-if="displayModal">
                     <div class="modal-header">
@@ -43,6 +43,7 @@
                         <div class="carousel slide" data-interval="false" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item" v-for="(image, imageIndex) in project.images" :key="imageIndex" :class="imageIndex == currentImage ? 'active' : ''">                            
+                                    <h3 class="text-center text-white">{{ image.title }}</h3>
                                     <img :src="image.link" :alt="image.title" class="image-modal">
                                 </div>
                             </div>
@@ -58,11 +59,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row justify-content-center">
-                <div v-for="(image, index) in project.images" :key="index" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
-                    <img :src="image.link" :alt="image.title" :title="image.description" class="img-fluid">
-                </div>
-            </div> -->
         </div>
     </section>
 </template>
@@ -141,6 +137,9 @@ export default {
 .extra-padding{
     padding: 5px 0 25px 0;
 }
+.pointer {
+    cursor: pointer;
+}
 .modal {
     display: block;
     position: fixed;
@@ -160,6 +159,7 @@ export default {
     .image-modal {
         width: 75vw;
         height: auto;
+        max-height: 90vh;
     }
 }
 </style>

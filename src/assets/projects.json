@@ -37,41 +37,6 @@
                 }
             ]
         },
-        "easylist": {
-            "name": "EasyList",
-            "description": "Ad posting mobile application created using Flutter",
-            "featured": true,
-            "open_source": true,
-            "live_link": "",
-            "source_link": "https://github.com/ReeceRose/EasyList",
-            "trello_link": "",
-            "display_image": "https://static.reecerose.com/images/projects/easylist/main.gif",
-            "images": [
-                { 
-                    "title": "",
-                    "description": "",
-                    "link": ""
-                }
-            ],
-            "icons": [
-                {
-                    "name": "Flutter",
-                    "faIcon": "fab fa-google"
-                },                
-                {
-                    "name": "Firebase",
-                    "faIcon": "fas fa-fire"
-                },
-                {
-                    "name": "Android",
-                    "faIcon": "fab fa-android"
-                },
-                {
-                    "name": "iOS",
-                    "faIcon": "fab fa-apple"
-                }
-            ]
-        },
         "jwtexample": {
             "name": "JWT Example",
             "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.2 backend, Vue.JS frontend. This is a template project which will be used to rapdily develop further portfolio projects",
@@ -82,21 +47,6 @@
             "trello_link": "",
             "display_image": "https://static.reecerose.com/images/projects/JWTExample/search.gif",
             "images": [
-                { 
-                    "title": "Home page",
-                    "description": "Home page (no authentication required)",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/home.png"
-                },
-                { 
-                    "title": "Admin dashboard",
-                    "description": "Preview of admin dashboard",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/adminDashboard.png"
-                },
-                { 
-                    "title": "Pagination support",
-                    "description": "Pagination of users on admin dashboard",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/pagination.png"
-                },
                 { 
                     "title": "Login page",
                     "description": "Login page",
@@ -111,9 +61,140 @@
                     "title": "Detailed user",
                     "description": "Preview of a detailed user",
                     "link": "https://static.reecerose.com/images/projects/JWTExample/detailedUser.png"
+                },
+                { 
+                    "title": "Home page",
+                    "description": "Home page (no authentication required)",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/home.png"
+                },
+                { 
+                    "title": "Admin dashboard",
+                    "description": "Preview of admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/adminDashboard.png"
+                },
+                { 
+                    "title": "Pagination support",
+                    "description": "Pagination of users on admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/pagination.png"
                 }
             ],
             "icons": [
+                {
+                    "name": "MySQL",
+                    "faIcon": "fas fa-database"
+                },
+                {
+                    "name": "C#",
+                    "faIcon": "fas fa-file-code"
+                },
+                {
+                    "name": "HTML",
+                    "faIcon": "fab fa-html5"
+                },                
+                {
+                    "name": "Vue",
+                    "faIcon": "fab fa-vuejs"
+                },
+                {
+                    "name": "SASS",
+                    "faIcon": "fab fa-sass"
+                },
+                {
+                    "name": "Docker",
+                    "faIcon": "fab fa-docker"
+                }
+            ]
+        },
+        "newagerealestate": {
+            "name": "New Age Real Estate",
+            "description": "New Age Real Estate is a full-stack application that allows users to browse and inquire about any available listings. It also allows for an agent to create/manage their listings. To see more features check out the source link below or view them yourself at the demo link below",
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://nare.reecerose.com/",
+            "source_link": "https://github.com/ReeceRose/NewAgeRealEstate",
+            "trello_link": "https://trello.com/b/Sc1037oo/newagerealestate",
+            "display_image": "https://static.reecerose.com/images/projects/NewAgeRealEstate/listings.png",
+            "images": [
+                { 
+                    "title": "Home page",
+                    "description": "home page",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/home.png"
+                },
+                { 
+                    "title": "New Listings",
+                    "description": "Create a new listing",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/new-listing.png"
+                },
+                { 
+                    "title": "View Listing",
+                    "description": "View a listing",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/listings-view-1.png"
+                },
+                { 
+                    "title": "View Listing",
+                    "description": "View a listing",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/listings-view-2.png"
+                },
+                { 
+                    "title": "Edit Listing",
+                    "description": "Edit a listing",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/listings-edit-1.png"
+                },
+                { 
+                    "title": "Edit Listing",
+                    "description": "Edit a listing",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/listings-edit-2.png"
+                },
+                { 
+                    "title": "Search listings",
+                    "description": "Search/filter through listings",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/home-search.png"
+                },
+                { 
+                    "title": "Agents Dashboard",
+                    "description": "Agents dashboard. Agent must be an administrator to view this page",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/agents-dashboard.png"
+                },
+                { 
+                    "title": "Agent Listings",
+                    "description": "View an indivudual agents listings",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/agent-listings-dashboard.png"
+                },
+                { 
+                    "title": "Agent Dashboard",
+                    "description": "View an indivudual agents dashboard",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/agent-dashboard.png"
+                },
+                { 
+                    "title": "Agent Details",
+                    "description": "View an indivudual agents details",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/agent-details.png"
+                },
+                {
+                    "title": "Admin Dashboard",
+                    "description": "View admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/admin-dashboard.png"
+                },
+                { 
+                    "title": "Admin Listings Dashboard",
+                    "description": "View all agents listings",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/admin-listings-dashboard.png"
+                },
+                { 
+                    "title": "About",
+                    "description": "About us",
+                    "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/about.png"
+                }
+            ],
+            "icons": [
+                {
+                    "name": "MySQL",
+                    "faIcon": "fas fa-database"
+                },
+                {
+                    "name": "C#",
+                    "faIcon": "fas fa-file-code"
+                },
                 {
                     "name": "HTML",
                     "faIcon": "fab fa-html5"
