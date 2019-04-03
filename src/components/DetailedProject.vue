@@ -31,11 +31,38 @@
                 </span>
             </div>
             <h4>Images</h4>
-            <div class="row justify-content-center">
+            <div class="row p-3">
+                <div v-for="(image, index) in project.images" :key="index" class="col-lg-3 col-md-4 col-sm-6 pb-4 projects">
+                    <img :src="image.link" :alt="image.title" :title="image.description" class="img-fluid rounded" @click="toggleModal(index)">
+                </div>
+                <div class="modal" v-if="displayModal">
+                    <div class="modal-header">
+                        <button class="close text-white" @click="displayModal = false">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="carousel slide" data-interval="false" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item" v-for="(image, imageIndex) in project.images" :key="imageIndex" :class="imageIndex == currentImage ? 'active' : ''">                            
+                                    <img :src="image.link" :alt="image.title" class="image-modal">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" @click="previouseSlide">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" @click="nextSlide">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row justify-content-center">
                 <div v-for="(image, index) in project.images" :key="index" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
                     <img :src="image.link" :alt="image.title" :title="image.description" class="img-fluid">
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>
@@ -45,7 +72,44 @@ export default {
     name: 'DetailedProject',
     props: {
         project: Object
-    }
+    },
+    data() {
+        return {
+            displayModal: false,
+            currentImage: 0,
+        }
+    },
+    methods: {
+        toggleModal(imageIndex) {
+            this.displayModal = !this.displayModal
+            this.currentImage = imageIndex
+        },
+        nextSlide() {
+            if (this.currentImage >= this.project.images.length - 1) {
+                this.currentImage = 0
+            } else {
+                this.currentImage++
+            }
+        },
+        previouseSlide() {
+            if (this.currentImage <= 0) {
+                this.currentImage = this.project.images.length - 1
+            } else {
+                this.currentImage--
+            }
+        },
+    },
+    mounted() {
+        document.body.addEventListener('keyup', e => {
+            if (e.keyCode === 27) {
+                this.displayModal = false
+            } else if (e.keyCode === 37) {
+                this.previouseSlide();
+            } else if (e.keyCode === 39) {
+                this.nextSlide()
+            }
+        })
+    },
 }
 </script>
 
@@ -76,5 +140,26 @@ export default {
 }
 .extra-padding{
     padding: 5px 0 25px 0;
+}
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+
+    .modal-header {
+        border: none;
+    }
+
+    .image-modal {
+        width: 75vw;
+        height: auto;
+    }
 }
 </style>
