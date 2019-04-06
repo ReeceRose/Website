@@ -1,18 +1,22 @@
 <template>
-    <div id="App">
+    <div>
+        <Spinner v-if="loading"/>
         <router-view/>
     </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation'
-import Home from '@/views/Home'
+import Spinner from '@/components/Spinner.vue'
 
 export default {
     name: 'App',
     components: {
-        Navigation,
-        Home
+        Spinner
+    },
+    computed: {
+        loading() {
+            return this.$store.getters.isLoading
+        }
     }
 }
 </script>

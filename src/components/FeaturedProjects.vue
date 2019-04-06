@@ -1,7 +1,7 @@
 <template>
     <div class="row justify-content-center">
-        <div v-for="(project, index) in json.projects" :key="index" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
-            <Project
+        <div v-for="(project, index) in projects" :key="index" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 projects">
+            <TileProject
                 v-if="project.featured"
                 :title="project.name"
                 :display_image="project.display_image" 
@@ -12,18 +12,16 @@
 </template>
 
 <script>
-import Projects from '@/assets/projects.json'
-import Project from '@/components/TileProject.vue'
+import TileProject from '@/components/TileProject.vue'
 
 export default {
     name: 'FeaturedProjects',
     components: {
-        Projects,
-        Project
+        TileProject
     },
-    data () {
-        return {
-            json: Projects
+    computed: {
+        projects() {
+            return this.$store.getters.getProjects
         }
     }
 }
