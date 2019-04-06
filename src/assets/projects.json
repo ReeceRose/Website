@@ -1,113 +1,16 @@
 {
     "projects": 
     {
-        "weatherapp": {
-            "name": "Weather App",
-            "description": "Simple weather application made using VueJS. The application will use a previously set location or the default of Toronto and use a public API to grab current weather and forecasted weather. The main focus of this project was to demonstrate the basic use of calling APIs, storing information using Vuex, and to make a responsive site using no CSS libraries.",
-            "featured": true,
-            "open_source": true,
-            "live_link": "https://weather.reecerose.com",
-            "source_link": "https://github.com/ReeceRose/WeatherApp",
-            "trello_link": "",
-            "display_image": "https://static.reecerose.com/images/projects/WeatherApp/logo.gif",
-            "images": [
-                { 
-                    "title": "Forecasted weather",
-                    "description": "Forecasted weather",
-                    "link": "https://static.reecerose.com/images/projects/WeatherApp/forecastedWeather.png"
-                },
-                {
-                    "title": "Updated location is invalid",
-                    "description": "Updated location is invalid",
-                    "link": "https://static.reecerose.com/images/projects/WeatherApp/invalidLocation.png"
-                }
-            ],
-            "icons": [
-                {
-                    "name": "HTML",
-                    "faIcon": "fab fa-html5"
-                },                
-                {
-                    "name": "Vue",
-                    "faIcon": "fab fa-vuejs"
-                },
-                {
-                    "name": "SASS",
-                    "faIcon": "fab fa-sass"
-                }
-            ]
-        },
-        "jwtexample": {
-            "name": "JWT Example",
-            "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.2 backend, Vue.JS frontend. This is a template project which will be used to rapdily develop further portfolio projects",
-            "featured": true,
-            "open_source": true,
-            "live_link": "https://jwt.reecerose.com/",
-            "source_link": "https://github.com/ReeceRose/JWT-FullStack-Example/",
-            "trello_link": "",
-            "display_image": "https://static.reecerose.com/images/projects/JWTExample/search.gif",
-            "images": [
-                { 
-                    "title": "Login page",
-                    "description": "Login page",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/login.png"
-                },
-                { 
-                    "title": "Register page",
-                    "description": "Register page",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/register.png"
-                },
-                {
-                    "title": "Detailed user",
-                    "description": "Preview of a detailed user",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/detailedUser.png"
-                },
-                { 
-                    "title": "Home page",
-                    "description": "Home page (no authentication required)",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/home.png"
-                },
-                { 
-                    "title": "Admin dashboard",
-                    "description": "Preview of admin dashboard",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/adminDashboard.png"
-                },
-                { 
-                    "title": "Pagination support",
-                    "description": "Pagination of users on admin dashboard",
-                    "link": "https://static.reecerose.com/images/projects/JWTExample/pagination.png"
-                }
-            ],
-            "icons": [
-                {
-                    "name": "MySQL",
-                    "faIcon": "fas fa-database"
-                },
-                {
-                    "name": "C#",
-                    "faIcon": "fas fa-file-code"
-                },
-                {
-                    "name": "HTML",
-                    "faIcon": "fab fa-html5"
-                },                
-                {
-                    "name": "Vue",
-                    "faIcon": "fab fa-vuejs"
-                },
-                {
-                    "name": "SASS",
-                    "faIcon": "fab fa-sass"
-                },
-                {
-                    "name": "Docker",
-                    "faIcon": "fab fa-docker"
-                }
-            ]
-        },
         "newagerealestate": {
             "name": "New Age Real Estate",
             "description": "New Age Real Estate is a full-stack application that allows users to browse and inquire about any available listings. It also allows for an agent to create/manage their listings. To see more features check out the source link below or view them yourself at the demo link below",
+            "my_role": "I was the sole developer of this application. This means anything from managing the trello board, managing the GitHub page, writing HTML, JavaScript, and CSS on the front-end, or writing C# on the backend",
+            "difficulties": "Any difficulties here",
+            "solution": "My solutuon here",
+            "features": [
+                "Here",
+                "Here"
+            ],
             "featured": true,
             "open_source": true,
             "live_link": "https://nare.reecerose.com/",
@@ -184,6 +87,125 @@
                     "title": "About",
                     "description": "About us",
                     "link": "https://static.reecerose.com/images/projects/NewAgeRealEstate/about.png"
+                }
+            ],
+            "icons": [
+                {
+                    "name": "MySQL",
+                    "faIcon": "fas fa-database"
+                },
+                {
+                    "name": "C#",
+                    "faIcon": "fas fa-file-code"
+                },
+                {
+                    "name": "HTML",
+                    "faIcon": "fab fa-html5"
+                },                
+                {
+                    "name": "Vue",
+                    "faIcon": "fab fa-vuejs"
+                },
+                {
+                    "name": "SASS",
+                    "faIcon": "fab fa-sass"
+                },
+                {
+                    "name": "Docker",
+                    "faIcon": "fab fa-docker"
+                }
+            ]
+        },
+        "weatherapp": {
+            "name": "Weather App",
+            "description": "Simple weather application made using VueJS. The application will use a previously set location or the default of Toronto and use a public API to grab current weather and forecasted weather",
+            "my_role": "As the sole developer of this web application, I wrote all the HTML, CSS, and JavaScript",
+            "difficulties": "The purpose of this project was to improve my CSS skills by not depending on any libraries. Mobile responsibility was a major focus of this project",
+            "solution": "Research was required in order to decide how I wanted to handle mobile responsibility. Ultimately I decided to go with CSS grid for mobile responsibility",
+            "features": [
+                "Enter location",
+                "Current weather forecast",
+                "24+ Hour Weather Forecast (3 Hour Increments)"
+            ],
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://weather.reecerose.com",
+            "source_link": "https://github.com/ReeceRose/WeatherApp",
+            "trello_link": "",
+            "display_image": "https://static.reecerose.com/images/projects/WeatherApp/logo.gif",
+            "images": [
+                { 
+                    "title": "Forecasted weather",
+                    "description": "Forecasted weather",
+                    "link": "https://static.reecerose.com/images/projects/WeatherApp/forecastedWeather.png"
+                },
+                {
+                    "title": "Updated location is invalid",
+                    "description": "Updated location is invalid",
+                    "link": "https://static.reecerose.com/images/projects/WeatherApp/invalidLocation.png"
+                }
+            ],
+            "icons": [
+                {
+                    "name": "HTML",
+                    "faIcon": "fab fa-html5"
+                },                
+                {
+                    "name": "Vue",
+                    "faIcon": "fab fa-vuejs"
+                },
+                {
+                    "name": "SASS",
+                    "faIcon": "fab fa-sass"
+                }
+            ]
+        },
+        "jwtexample": {
+            "name": "JWT Example",
+            "description": "Full stack application used to demonstrate JSON Web Tokens (JWT) on ASP.NET Core 2.2 backend, Vue.JS frontend. This is a template project which will be used to rapdily develop further portfolio projects",
+            "my_role": "I was the sole developer of this application. This means anything from managing the trello board, managing the GitHub page, writing HTML, JavaScript, and CSS on the front-end, or writing C# on the backend",
+            "difficulties": "Any difficulties here",
+            "solution": "My solutuon here",
+            "features": [
+                "Here",
+                "Here"
+            ],
+            "featured": true,
+            "open_source": true,
+            "live_link": "https://jwt.reecerose.com/",
+            "source_link": "https://github.com/ReeceRose/JWT-FullStack-Example/",
+            "trello_link": "",
+            "display_image": "https://static.reecerose.com/images/projects/JWTExample/search.gif",
+            "images": [
+                { 
+                    "title": "Login page",
+                    "description": "Login page",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/login.png"
+                },
+                { 
+                    "title": "Register page",
+                    "description": "Register page",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/register.png"
+                },
+                {
+                    "title": "Detailed user",
+                    "description": "Preview of a detailed user",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/detailedUser.png"
+                },
+                { 
+                    "title": "Home page",
+                    "description": "Home page (no authentication required)",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/home.png"
+                },
+                { 
+                    "title": "Admin dashboard",
+                    "description": "Preview of admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/adminDashboard.png"
+                },
+                { 
+                    "title": "Pagination support",
+                    "description": "Pagination of users on admin dashboard",
+                    "link": "https://static.reecerose.com/images/projects/JWTExample/pagination.png"
                 }
             ],
             "icons": [

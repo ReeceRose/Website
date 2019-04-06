@@ -30,6 +30,30 @@
                     <i :class="icon.faIcon" class="fa-2x fa-fw"></i>
                 </span>
             </div>
+            <h4>My Role</h4>
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <p>{{ project.my_role }}</p>
+                </div>
+            </div>
+            <h4>Project Difficulties</h4>
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <p>{{ project.difficulties }}</p>
+                </div>
+            </div>
+            <h4>My Solution</h4>
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <p>{{ project.solution }}</p>
+                </div>
+            </div>
+            <h4>Notable Features</h4>
+            <div class="row">
+                <ul class="col-8 offset-2">
+                    <li v-for="(feature, index) in project.features" :key="index">{{ feature }}</li>
+                </ul>
+            </div>
             <h4>Images</h4>
             <div class="row p-3">
                 <div v-for="(image, index) in project.images" :key="index" class="col-lg-3 col-md-4 col-sm-6 pb-4 projects border pointer" @click="toggleModal(index)">
@@ -118,6 +142,9 @@ export default {
 }
 .white {
     color: #fff !important;
+}
+.col-8 {
+    font-size: 0.85rem;
 }
 .icons {
     padding: 0 10px 25px 10px;
