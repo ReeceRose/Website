@@ -51,7 +51,7 @@
             <h4>Notable Features</h4>
             <div class="row">
                 <ul class="col-8 offset-2">
-                    <li v-for="(feature, index) in project.features" :key="index">{{ feature }}</li>
+                    <li v-for="(feature, index) in project.features" :key="index">- {{ feature }}</li>
                 </ul>
             </div>
             <h4>Images</h4>
@@ -145,6 +145,9 @@ export default {
 }
 .col-8 {
     font-size: 0.85rem;
+}
+ul {
+    list-style: none;
 }
 .icons {
     padding: 0 10px 25px 10px;
