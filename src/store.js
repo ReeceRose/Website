@@ -21,16 +21,19 @@ export default new Vuex.Store({
         loadProjects({ commit }) {
             let projects = []
             commit('setLoading', true)
-            db.collection("projects").get().then((querySnapshot) => {
-                querySnapshot.forEach(doc => {
-                    projects.push(doc.data())
-                });
+            db.collection("projects")
+                .orderBy("display_order", "asc")
+                .get()
+                .then((querySnapshot) => {
+                    querySnapshot.forEach(doc => {
+                        projects.push(doc.data())
+                    });
                 commit('setProjects', projects)
-            }).catch(() => {
-                // TODO: Show error
-            }).finally(() => {
-                commit('setLoading', false)
-            })
+                }).catch(() => {
+                    // TODO: Show error
+                }).finally(() => {
+                    commit('setLoading', false)
+                })
         }
     }
 })

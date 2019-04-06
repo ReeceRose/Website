@@ -21,7 +21,12 @@ export default {
     },
     computed: {
         projects() {
-            return this.$store.getters.getProjects
+            let projects = this.$store.getters.getProjects
+            let featured = []
+            projects.forEach(project => {
+                if (project.featured) featured.push(project)
+            });
+            return featured
         }
     }
 }
