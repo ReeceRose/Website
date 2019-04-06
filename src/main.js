@@ -3,6 +3,8 @@ import store from '@/store.js'
 import App from '@/App.vue'
 import router from '@/router'
 
+store.dispatch('loadProjects')
+
 Vue.config.productionTip = false
 
 new Vue({
