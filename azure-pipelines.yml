@@ -11,7 +11,10 @@ steps:
   inputs:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
-
+- script: |
+    cd src/firebase/
+    cp Config.template.js Config.js
+  displayName: 'copy empty config file'
 - script: |
     npm install
     npm run build
