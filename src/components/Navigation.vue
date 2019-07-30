@@ -16,6 +16,9 @@
                     <li class="nav-item"> 
                         <router-link class="nav-link" to="/#Contact">Contact</router-link>
                     </li> 
+                    <li class="nav-item"> 
+                        <a href="https://blog.reecerose.com/" target="_blank" class="nav-link">Blog</a>
+                    </li> 
                 </ul>
             </div> 
         </nav> 
