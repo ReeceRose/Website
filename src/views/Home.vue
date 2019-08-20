@@ -38,6 +38,14 @@
             <router-link to="/Projects" class="btn btn-lg btn-blue">View all my projects</router-link>
           </div>
         </section>
+        <section id="Games" class="row padding-top">
+          <div class="section-background shadow-lg col-12">
+            <h1 class="title">Games</h1>
+            <hr>
+            <FeaturedGames class="mt-4"/>
+            <router-link to="/Games" class="btn btn-lg btn-blue">View all my games</router-link>
+          </div>
+        </section>
         <section id="Contact" class="row padding-top">
           <div class="section-background col-12">
             <h1 class="title">Contact Me</h1>
@@ -56,6 +64,7 @@ import ScrollReveal from 'scrollreveal'
 
 import Navigation from '@/components/Navigation'
 import FeaturedProjects from '@/components/Projects/FeaturedProjects.vue'
+import FeaturedGames from '@/components/Games/FeaturedGames.vue'
 
 export default {
   name: 'Home',
@@ -67,6 +76,7 @@ export default {
     ScrollReveal().reveal('#Header', {delay: 500, distance: '75px', duration: 1000});
     ScrollReveal().reveal('#About', {delay: 750, distance: '50px', duration: 2500});
     ScrollReveal().reveal('#Projects', {delay: 1000, distance: '75px', duration: 3500});
+    ScrollReveal().reveal('#Games', {delay: 1000, distance: '75px', duration: 3500});
     ScrollReveal().reveal('#Contact', {delay: 500, distance: '25px', duration: 2000});
   }
 }
@@ -111,10 +121,11 @@ export default {
   .btn {
     margin-top: 25px;
   }
-  .btn-blue {
-    background-color: get-color(primaryBlue) !important;
-    color: #fff;
-  }
+}
+
+.btn-blue {
+  background-color: get-color(primaryBlue) !important;
+  color: #fff;
 }
 
 #Contact {

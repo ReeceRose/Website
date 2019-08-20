@@ -24,7 +24,7 @@ export default {
       let projects = this.$store.getters.getProjects
       let featured = []
       projects.forEach(project => {
-          if (project.featured) featured.push(project)
+        if (project.featured) featured.push(project)
       });
       return featured
     }
