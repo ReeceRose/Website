@@ -70,7 +70,8 @@ export default {
   name: 'Home',
   components: {
     Navigation,
-    FeaturedProjects
+    FeaturedProjects,
+    FeaturedGames
   },
   mounted() {
     ScrollReveal().reveal('#Header', {delay: 500, distance: '75px', duration: 1000});
