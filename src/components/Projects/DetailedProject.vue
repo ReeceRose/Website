@@ -54,9 +54,6 @@
         <li v-for="(feature, index) in project.features" :key="index">- {{ feature }}</li>
       </ul>
     </div>
-    <div v-if="project.blogPost">
-      <h4>More information <a :href="project.blogPost" target="_blank">here</a></h4>
-    </div>
     <h4>Images</h4>
     <div class="row p-3">
         <div v-for="(image, index) in project.images" :key="index" class="col-lg-3 col-md-4 col-sm-6 pb-4 projects border pointer" @click="toggleModal(index)">

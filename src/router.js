@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Projects from '@/views/Projects.vue'
-import Games from '@/views/Games.vue'
 import Error from '@/views/Error.vue'
 
 Vue.use(Router)
@@ -10,7 +9,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   scrollBehavior(to) {
-    if (to.name == 'Projects' || to.name == 'Games')  {
+    if (to.name == 'Projects')  {
       return { x:0, y:0 }
     }
     if (to.hash) {
@@ -28,11 +27,6 @@ export default new Router({
       path: '/Projects/:project?',
       name: 'Projects',
       component: Projects
-    },
-    {
-      path: '/Games/:game?',
-      name: 'Games',
-      component: Games
     },
     { 
       path: '/Error',
