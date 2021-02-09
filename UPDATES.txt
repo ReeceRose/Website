@@ -1,0 +1,8 @@
+Updates I want to make to original website:
+- Better design
+- Markdown rendering? Or continue to use firebase?
+- More information about me/jobs
+- Better project/[name] page
+  - Consistent image sizes
+  - Better more thorough descriptions
+  - Maybe remove some of the fields
