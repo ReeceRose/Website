@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import SEO from '../components/SEO';
 
@@ -9,6 +10,7 @@ export default function Home(): JSX.Element {
         description="Portfolio website for Reece Rose"
       />
       <Header />
+      <Footer />
     </div>
   );
 }
