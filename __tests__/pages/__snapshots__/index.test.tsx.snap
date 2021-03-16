@@ -2,9 +2,30 @@
 
 exports[`Index page matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="w-full h-full min-h-screen bg-fixed bg-white bg-cover"
-    style="background-image: url(/background.svg);"
-  />
+  <div>
+    <header>
+      <div
+        class="flex h-24 m-3 align-items-center"
+      >
+        <a
+          class="font-bold"
+          href="/"
+        >
+          Reece Rose
+        </a>
+        <nav
+          class="ml-auto"
+        >
+          <a
+            href="mailto:reecerose18@gmail.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+  </div>
 </DocumentFragment>
 `;
