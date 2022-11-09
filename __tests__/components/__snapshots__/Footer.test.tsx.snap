@@ -7,7 +7,6 @@ exports[`Footer component matches snapshot 1`] = `
       class="box-border flex items-center justify-center h-32 py-5 m-3 mt-20 text-center border-t-2 border-gray-200 w-100"
     >
       <a
-        class="font-bold"
         href="/"
       >
         Reece Rose

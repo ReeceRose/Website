@@ -5,8 +5,8 @@ const Footer = (): JSX.Element => {
   return (
     <footer>
       <div className="box-border flex items-center justify-center h-32 py-5 m-3 mt-20 text-center border-t-2 border-gray-200 w-100">
-        <Link href="/">
-          <a className="font-bold">Reece Rose</a>
+        <Link href="/" className="font-bold">
+          Reece Rose
         </Link>
         <nav className="ml-auto">
           <ul>

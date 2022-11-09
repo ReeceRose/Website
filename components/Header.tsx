@@ -4,8 +4,8 @@ const Header = (): JSX.Element => {
   return (
     <header>
       <div className="flex h-24 m-3 align-items-center">
-        <Link href="/">
-          <a className="font-bold">Reece Rose</a>
+        <Link href="/" className="font-bold">
+          Reece Rose
         </Link>
         <nav className="ml-auto">
           <a
