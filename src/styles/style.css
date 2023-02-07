@@ -1,0 +1,44 @@
+/* ========== import font source ========== */
+@import "fonts.css";
+
+/* ========== import custom styles ========== */
+@import "custom-styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== tailwind custom styles ========== */
+@layer components {
+  body {
+    @apply bg-light dark:bg-dark;
+  }
+  .container {
+    @apply max-w-6xl px-4 mx-auto;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-outfit;
+  }
+  h1 {
+    @apply text-6xl sm:text-8xl;
+  }
+  .heading {
+    @apply main-heading;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  p,
+  li,
+  a {
+    @apply font-inter text-dark-gray;
+  }
+  .footer-icons {
+    @apply flex items-center justify-center p-4 border rounded-lg dark:text-light border-dark dark:border-light;
+  }
+}

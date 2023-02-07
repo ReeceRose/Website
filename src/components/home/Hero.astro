@@ -1,0 +1,13 @@
+---
+import { IHeroProps } from "@types";
+
+const { name, about } = Astro.props as IHeroProps;
+---
+
+<section>
+  <p class="mt-8 dark:text-light">Hey, I’m</p>
+  <h1 class="heading">{name}</h1>
+  <p class="mb-16 text-lg dark:text-light">
+    {about}
+  </p>
+</section>
