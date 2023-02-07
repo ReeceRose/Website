@@ -1,0 +1,33 @@
+---
+import Footer from "@components/general/Footer.astro";
+
+import "../styles/style.css";
+---
+
+<main class="container">
+  <slot />
+</main>
+<Footer />
+
+<script>
+  const theme = (() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+      return "light";
+    } else if (
+      typeof localStorage !== "undefined" &&
+      localStorage.getItem("theme")
+    ) {
+      return localStorage.getItem("theme");
+    }
+    return "dark";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+  window.localStorage.setItem("theme", theme);
+</script>

@@ -1,0 +1,34 @@
+---
+import { info } from "@data";
+
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/home/Hero.astro";
+import Experience from "@components/home/Experience.astro";
+import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
+import MetaHead from "@components/general/MetaHead.astro";
+
+const projects = info.projects;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MetaHead title={"Reece Rose - Portfolio"} description={info.about} />
+  </head>
+
+  <body>
+    <Layout>
+      <Hero name={info.name} about={info.about} />
+      <Experience title={"EXPERIENCE"} details={info.experience} />
+      {
+        projects.length > 0 && (
+          <section>
+            <h2 class="w-60 dark:text-light">PROJECTS</h2>
+            <ProjectsWrapper projects={projects} />
+          </section>
+        )
+      }
+      <Experience title={"EDUCATION"} details={info.education} />
+    </Layout>
+  </body>
+</html>
