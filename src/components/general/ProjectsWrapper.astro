@@ -4,7 +4,14 @@ import ProjectCard from "./ProjectCard.astro";
 
 const { projects } = Astro.props as IProjects;
 ---
+<section
+  class="flex flex-col items-start justify-between sm:flex-row dark:text-light"
+>
+  <h2 class="w-60 dark:text-light">PROJECTS</h2>
+  <div class="w-full">
+    <div class="grid grid-cols-1 gap-4">
+      {projects.map((project) => <ProjectCard projectDetail={project} />)}
+    </div>
+  </div>
+</section>
 
-<div class="grid grid-cols-1 gap-4 my-4 md:grid-cols-2">
-  {projects.map((project) => <ProjectCard projectDetail={project} />)}
-</div>

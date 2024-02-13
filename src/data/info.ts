@@ -3,10 +3,8 @@ export const info = {
   name: "Reece Rose",
   jobDescription: "Full-stack Developer",
   about: `
-    As a software developer based in Kitchener, ON, Canada, I specialize in creating dynamic and visually appealing websites and mobile applications.
-    With a passion for technology and a keen eye for design, I strive to create intuitive and engaging user experiences.
-    I bring a unique combination of technical proficiency and creative flair to every project I undertake, from concept to deployment.
-    `,
+  As a versatile software developer, my expertise spans both backend and frontend development, enabling me to architect comprehensive web solutions that seamlessly integrate functionality with captivating design. While my core proficiency lies in backend development, I've honed my frontend skills to ensure a holistic approach to crafting compelling user experiences.
+  I'm particularly passionate about exploring new technologies, often incorporating them into my side projects to stay at the forefront of innovation. Driven by a fervent passion for technology and an innate sense of design, I am committed to engineering immersive user experiences that captivate and inspire. With each project, I harmonize technical prowess with creative finesse, ensuring that every facet of the software ecosystem aligns to deliver exceptional results.`,
   experience: [
     {
       name: "Software Developer",
@@ -51,17 +49,40 @@ export const info = {
   },
 
   projects: [
-    // {
-    //   title: "Placeholder",
-    //   thumbnail: "https://via.placeholder.com/150",
-    //   githubUrl: "https://github.com",
-    //   liveUrl: "https://vercel.app/",
-    //   tech: [
-    //     {
-    //       title: "Astro",
-    //       colour: "bg-orange-400",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Rust + HTMX Powered Todo application",
+      thumbnail: "/assets/images/htmx.webp",
+      githubUrl: "https://github.com/ReeceRose/rust-askama-htmx-tailwind-todo",
+      liveUrl:
+        "https://rust-askama-htmx-tailwind-todo-production.up.railway.app/",
+      description:
+        "Rust (Axum) server, powered by askama templates, serving HTMX pages, and styled with Tailwind CSS todo application.",
+      tech: [
+        {
+          title: "HTMX",
+          colour: "bg-htmx",
+        },
+        {
+          title: "TailwindCSS",
+          colour: "bg-sky-400",
+        },
+        {
+          title: "Rust",
+          colour: "bg-orange-400",
+        },
+        {
+          title: "Axum",
+          colour: "bg-blue",
+        },
+        {
+          title: "Askama",
+          colour: "bg-blue",
+        },
+        {
+          title: "SQLite",
+          colour: "bg-sky-500",
+        },
+      ],
+    },
   ],
 };

@@ -22,10 +22,7 @@ const projects = info.projects;
       <Experience title={"EXPERIENCE"} details={info.experience} />
       {
         projects.length > 0 && (
-          <section>
-            <h2 class="w-60 dark:text-light">PROJECTS</h2>
-            <ProjectsWrapper projects={projects} />
-          </section>
+          <ProjectsWrapper projects={projects} />
         )
       }
       <Experience title={"EDUCATION"} details={info.education} />

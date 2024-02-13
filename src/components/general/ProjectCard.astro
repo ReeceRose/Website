@@ -1,17 +1,20 @@
 ---
 import { IProjectDetails } from "@types";
 const { projectDetail } = Astro.props as IProjectDetails;
-const { title, tech, thumbnail, liveUrl, githubUrl } = projectDetail;
+const { title, tech, thumbnail, description, liveUrl, githubUrl } = projectDetail;
 ---
 
 <article class="w-full group dark:text-light">
-  <h1 class="mb-4 text-xl sm:text-2xl text-blue">{title}</h1>
-  <div class="grid grid-cols-12 mb-4">
+  <h1 class="mb-2 text-xl sm:text-2xl text-blue">{title}</h1>
+  {description && (
+    <div class="mb-4 sm:text-lg text-gray">{description}</div>
+  )}
+  <div class="grid grid-cols-8 md:grid-cols-12 mb-4 gap-2">
     {
       tech?.map((t) => (
         <p
           class:list={[
-            "col-span-4 p-3 text-lg text-center rounded-2xl font-bold dark:text-light",
+            "col-span-4 p-1 text-center rounded-2xl font-bold dark:text-light",
             t.colour,
           ]}
         >
@@ -23,7 +26,7 @@ const { title, tech, thumbnail, liveUrl, githubUrl } = projectDetail;
 
   <img
     src={thumbnail}
-    class="w-full max-h-80 rounded-3xl"
+    class="w-full max-h-52 rounded-3xl"
     loading="lazy"
     width="100%"
     height="100%"
