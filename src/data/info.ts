@@ -31,13 +31,13 @@ export const info = {
 
   education: [
     {
-      name: "Systems Analyst Co-op",
+      name: "Software Development (Co-op Program)",
       company: "Sheridan College",
       location: "Oakville, ON, Canada",
       startDate: "Sepetember 2016",
       endDate: "December 2019",
       description: [
-        "Advanced Diploma of Computer Systems Technology – Systems Analyst",
+        "Advanced Diploma of Computer Systems Technology – Information Systems Engineering",
       ],
     },
   ],
