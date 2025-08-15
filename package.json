@@ -19,6 +19,6 @@
     "astro-robots-txt": "^1.0.0"
   },
   "dependencies": {
-    "@astrojs/node": "9.3.3"
+    "@astrojs/node": "9.4.1"
   }
 }
