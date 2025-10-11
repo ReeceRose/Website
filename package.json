@@ -13,12 +13,12 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "3.4.2",
+    "@astrojs/sitemap": "3.6.0",
     "@astrojs/tailwind": "6.0.2",
-    "astro": "5.12.8",
+    "astro": "5.14.4",
     "astro-robots-txt": "^1.0.0"
   },
   "dependencies": {
-    "@astrojs/node": "9.3.3"
+    "@astrojs/node": "9.4.6"
   }
 }
