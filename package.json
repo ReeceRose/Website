@@ -15,7 +15,7 @@
   "devDependencies": {
     "@astrojs/sitemap": "3.6.0",
     "@astrojs/tailwind": "6.0.2",
-    "astro": "5.14.4",
+    "astro": "5.15.9",
     "astro-robots-txt": "^1.0.0"
   },
   "dependencies": {
