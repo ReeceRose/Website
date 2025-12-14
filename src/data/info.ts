@@ -48,41 +48,5 @@ export const info = {
     linkedin: "https://www.linkedin.com/in/reece-rose-5b2864116/",
   },
 
-  projects: [
-    {
-      title: "Rust + HTMX Powered Todo application",
-      thumbnail: "/assets/images/htmx.webp",
-      githubUrl: "https://github.com/ReeceRose/rust-askama-htmx-tailwind-todo",
-      liveUrl:
-        "https://rust-askama-htmx-tailwind-todo-production.up.railway.app/",
-      description:
-        "Rust (Axum) server, powered by askama templates, serving HTMX pages, and styled with Tailwind CSS todo application.",
-      tech: [
-        {
-          title: "HTMX",
-          colour: "bg-htmx",
-        },
-        {
-          title: "TailwindCSS",
-          colour: "bg-sky-400",
-        },
-        {
-          title: "Rust",
-          colour: "bg-orange-400",
-        },
-        {
-          title: "Axum",
-          colour: "bg-blue",
-        },
-        {
-          title: "Askama",
-          colour: "bg-blue",
-        },
-        {
-          title: "SQLite",
-          colour: "bg-sky-500",
-        },
-      ],
-    },
-  ],
+  projects: [],
 };
