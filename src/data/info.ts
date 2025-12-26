@@ -34,7 +34,7 @@ export const info = {
       name: "Software Development (Co-op Program)",
       company: "Sheridan College",
       location: "Oakville, ON, Canada",
-      startDate: "Sepetember 2016",
+      startDate: "September 2016",
       endDate: "December 2019",
       description: [
         "Advanced Diploma of Computer Systems Technology – Information Systems Engineering",

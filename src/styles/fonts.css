@@ -1,18 +1,6 @@
-/* Inter */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(/assets/fonts/Inter/Inter-Thin.ttf) format("trueType");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(/assets/fonts/Inter/Inter-ExtraLight.ttf) format("trueType");
-}
+/* Inter - Body text font */
+/* Only loading weights actually used in the site */
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -20,6 +8,7 @@
   font-display: swap;
   src: url(/assets/fonts/Inter/Inter-Light.ttf) format("trueType");
 }
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -27,13 +16,7 @@
   font-display: swap;
   src: url(/assets/fonts/Inter/Inter-Regular.ttf) format("trueType");
 }
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/Inter/Inter-Medium.ttf) format("trueType");
-}
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -41,6 +24,7 @@
   font-display: swap;
   src: url(/assets/fonts/Inter/Inter-SemiBold.ttf) format("trueType");
 }
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -48,43 +32,10 @@
   font-display: swap;
   src: url(/assets/fonts/Inter/Inter-Bold.ttf) format("trueType");
 }
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/Inter/Inter-ExtraBold.ttf) format("trueType");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(/assets/fonts/Inter/Inter-Black.ttf) format("trueType");
-}
 
-/* Outfit */
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(/assets/fonts/Outfit/Outfit-Thin.ttf) format("trueType");
-}
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(/assets/fonts/Outfit/Outfit-ExtraLight.ttf) format("trueType");
-}
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/Outfit/Outfit-Light.ttf) format("trueType");
-}
+/* Outfit - Heading font */
+/* Only loading weights actually used in the site */
+
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -92,13 +43,7 @@
   font-display: swap;
   src: url(/assets/fonts/Outfit/Outfit-Regular.ttf) format("trueType");
 }
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/Outfit/Outfit-Medium.ttf) format("trueType");
-}
+
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -106,25 +51,11 @@
   font-display: swap;
   src: url(/assets/fonts/Outfit/Outfit-SemiBold.ttf) format("trueType");
 }
+
 @font-face {
   font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(/assets/fonts/Outfit/Outfit-Bold.ttf) format("trueType");
-}
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/Outfit/Outfit-ExtraBold.ttf) format("trueType");
-}
-
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(/assets/fonts/Outfit/Outfit-Black.ttf) format("trueType");
 }

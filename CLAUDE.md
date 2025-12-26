@@ -19,7 +19,9 @@ This is a personal portfolio website for Reece Rose, built with **Astro** and st
 npm run dev      # Start development server
 npm run build    # Build for production
 npm run preview  # Preview production build locally
-npm run start    # Run the built server (dist/server/entry.mjs)
+npm run lint     # Run Biome linter
+npm run format   # Format code with Biome
+npm run check    # Run Biome linter and formatter
 ```
 
 ## Project Structure
@@ -46,7 +48,8 @@ Website/
 │   ├── layouts/
 │   │   └── Layout.astro      # Main layout wrapper
 │   ├── pages/
-│   │   └── index.astro       # Homepage (only page)
+│   │   ├── index.astro       # Homepage
+│   │   └── 404.astro         # Custom 404 error page
 │   ├── styles/
 │   │   ├── style.css         # Main stylesheet (imports others)
 │   │   ├── fonts.css         # @font-face definitions
@@ -55,8 +58,10 @@ Website/
 │   │   └── index.ts          # TypeScript interfaces
 │   └── env.d.ts              # Astro environment types
 ├── astro.config.mjs          # Astro configuration
+├── biome.json                # Biome linter/formatter configuration
 ├── tailwind.config.cjs       # Tailwind configuration
 ├── tsconfig.json             # TypeScript configuration
+├── vercel.json               # Vercel deployment config (security headers)
 └── package.json
 ```
 
@@ -168,9 +173,25 @@ projects: [
 - **Deployment**: Vercel (configured in `.vercel/` directory)
 - **SEO**: Auto-generated sitemap and robots.txt via Astro integrations
 
+## Code Quality
+
+This project uses **Biome** for linting and formatting:
+
+```bash
+npm run check    # Lint and format in one command
+```
+
+Biome is configured in `biome.json` with:
+- 2-space indentation
+- Double quotes for strings
+- Semicolons required
+- Trailing commas (ES5 style)
+
 ## Development Notes
 
-- The site is a single-page application (only `index.astro`)
+- The site has two pages: `index.astro` (home) and `404.astro` (error page)
 - No client-side JavaScript framework (pure Astro with minimal vanilla JS for theme)
 - Images should be optimized (prefer `.webp` format)
 - Font preloading is configured in `MetaHead.astro`
+- Only essential font weights are loaded (7 total) to optimize performance
+- Security headers are configured in `vercel.json`
