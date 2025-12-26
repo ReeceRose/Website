@@ -1,0 +1,120 @@
+---
+import { info } from "@data";
+---
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      {info.name.split(" ")[0]}<span class="text-blue">.</span>
+    </a>
+    <div class="nav-links">
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a
+        href={info.socialMedia.email}
+        class="nav-cta"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  :global([data-theme="dark"]) .nav {
+    background: rgba(17, 17, 17, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  :global([data-theme="dark"]) .nav-logo {
+    color: #fff;
+  }
+
+  .nav-logo:hover {
+    opacity: 0.7;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  :global([data-theme="dark"]) .nav-link {
+    color: #999;
+  }
+
+  .nav-link:hover {
+    color: #33d2ff;
+  }
+
+  .nav-cta {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
+    background-size: 200% 200%;
+    padding: 0.625rem 1.25rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-cta:hover {
+    background-position: 100% 0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(51, 210, 255, 0.3);
+  }
+
+  @media (max-width: 640px) {
+    .nav-links {
+      gap: 1rem;
+    }
+
+    .nav-link {
+      display: none;
+    }
+  }
+</style>

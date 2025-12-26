@@ -1,44 +1,120 @@
 /* ========== import font source ========== */
 @import "fonts.css";
 
-/* ========== import custom styles ========== */
-@import "custom-styles.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ========== tailwind custom styles ========== */
-@layer components {
+/* ========== Global base styles ========== */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-light dark:bg-dark;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .container {
-    @apply max-w-6xl px-4 mx-auto;
+
+  /* Default link styles */
+  a {
+    text-decoration: none;
+    color: inherit;
   }
+
+  /* Remove default list styles */
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Default heading styles */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-outfit;
+    margin: 0;
+    font-weight: inherit;
   }
-  h1 {
-    @apply text-6xl sm:text-8xl;
+
+  p {
+    margin: 0;
   }
-  .heading {
-    @apply main-heading;
+
+  /* Focus visible styles for accessibility */
+  :focus-visible {
+    outline: 2px solid #33d2ff;
+    outline-offset: 2px;
   }
-  h2 {
-    @apply text-xl font-semibold;
+
+  /* Selection styles */
+  ::selection {
+    background: rgba(51, 210, 255, 0.3);
+    color: inherit;
   }
-  p,
-  li,
-  a {
-    @apply font-inter text-dark-gray;
+}
+
+/* ========== Utility components ========== */
+@layer components {
+  .container {
+    @apply max-w-6xl px-4 mx-auto;
   }
-  .footer-icons {
-    @apply flex items-center justify-center p-4 border rounded-lg dark:text-light border-dark dark:border-light;
+
+  .text-blue {
+    color: #33d2ff;
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ========== Custom animations ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }

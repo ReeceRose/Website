@@ -1,10 +1,9 @@
 ---
-import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <MetaHead
@@ -15,18 +14,174 @@ import MetaHead from "@components/general/MetaHead.astro";
 
   <body>
     <Layout>
-      <section class="flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <h1 class="heading">404</h1>
-        <p class="text-xl mb-8 dark:text-light">
-          The page you're looking for doesn't exist.
-        </p>
-        <a
-          href="/"
-          class="px-6 py-3 text-light bg-blue rounded-lg hover:opacity-80 transition-opacity"
-        >
-          Go back home
-        </a>
+      <section class="error-page">
+        <div class="error-content">
+          <span class="error-label">Error 404</span>
+          <h1 class="error-title">Page Not Found</h1>
+          <p class="error-description">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+          <a href="/" class="error-button">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Go back home
+          </a>
+        </div>
+
+        <div class="error-decoration">
+          <div class="decoration-circle decoration-1"></div>
+          <div class="decoration-circle decoration-2"></div>
+        </div>
       </section>
     </Layout>
   </body>
 </html>
+
+<style>
+  .error-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 1.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .error-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    max-width: 32rem;
+  }
+
+  .error-label {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #33d2ff;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .error-title {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.6s ease 0.1s forwards, gradient 8s ease infinite;
+    opacity: 0;
+  }
+
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .error-description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.6s ease 0.2s forwards;
+    opacity: 0;
+  }
+
+  :global([data-theme="dark"]) .error-description {
+    color: #999;
+  }
+
+  .error-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
+    background-size: 200% 200%;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+    opacity: 0;
+  }
+
+  .error-button:hover {
+    background-position: 100% 0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(51, 210, 255, 0.3);
+  }
+
+  .error-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.2;
+  }
+
+  .decoration-1 {
+    width: 300px;
+    height: 300px;
+    background: #9845e8;
+    top: 20%;
+    left: 10%;
+  }
+
+  .decoration-2 {
+    width: 250px;
+    height: 250px;
+    background: #33d2ff;
+    bottom: 20%;
+    right: 10%;
+  }
+
+  :global([data-theme="dark"]) .decoration-circle {
+    opacity: 0.1;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

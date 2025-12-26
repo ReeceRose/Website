@@ -1,0 +1,246 @@
+---
+const skills = [
+  {
+    category: "Backend",
+    items: ["C#", ".NET", "Python", "Node.js", "REST APIs", "SQL"],
+  },
+  {
+    category: "Frontend",
+    items: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind", "Astro"],
+  },
+  {
+    category: "Tools & Infrastructure",
+    items: ["Git", "Docker", "CI/CD", "AWS", "Vercel", "PostgreSQL"],
+  },
+];
+---
+
+<section class="skills-section" id="skills">
+  <div class="section-header">
+    <span class="section-label">SKILLS</span>
+    <h2 class="section-title">Technologies I Work With</h2>
+  </div>
+
+  <div class="skills-grid">
+    {
+      skills.map((group, groupIndex) => (
+        <div class="skill-group" style={`--delay: ${groupIndex * 0.15}s`}>
+          <h3 class="skill-category">{group.category}</h3>
+          <div class="skill-items">
+            {group.items.map((skill, skillIndex) => (
+              <span
+                class="skill-tag"
+                style={`--item-delay: ${(groupIndex * 0.15) + (skillIndex * 0.05)}s`}
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="skills-decoration">
+    <div class="code-block">
+      <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {"{"}<br/>  <span class="code-property">name</span>: <span class="code-string">"Reece Rose"</span>,<br/>  <span class="code-property">role</span>: <span class="code-string">"Full-Stack Developer"</span>,<br/>  <span class="code-property">passions</span>: [<span class="code-string">"clean code"</span>, <span class="code-string">"UX"</span>]<br/>{"}"};</code></pre>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    padding: 5rem 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #33d2ff;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: #111;
+  }
+
+  :global([data-theme="dark"]) .section-title {
+    color: #fff;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  .skill-group {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 1.75rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+    transition: all 0.3s ease;
+  }
+
+  :global([data-theme="dark"]) .skill-group {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .skill-group:hover {
+    border-color: rgba(51, 210, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(51, 210, 255, 0.1);
+  }
+
+  .skill-category {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  :global([data-theme="dark"]) .skill-category {
+    color: #fff;
+  }
+
+  .skill-category::before {
+    content: "";
+    width: 3px;
+    height: 1.25rem;
+    background: linear-gradient(180deg, #9845e8, #33d2ff);
+    border-radius: 2px;
+  }
+
+  .skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+
+  .skill-tag {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #555;
+    background: rgba(51, 210, 255, 0.08);
+    border: 1px solid rgba(51, 210, 255, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+    animation-delay: var(--item-delay);
+  }
+
+  :global([data-theme="dark"]) .skill-tag {
+    color: #ccc;
+    background: rgba(51, 210, 255, 0.1);
+    border-color: rgba(51, 210, 255, 0.2);
+  }
+
+  .skill-tag:hover {
+    background: rgba(51, 210, 255, 0.15);
+    border-color: #33d2ff;
+    color: #33d2ff;
+    transform: translateY(-2px);
+  }
+
+  .skills-decoration {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    .skills-decoration {
+      display: block;
+    }
+  }
+
+  .code-block {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    font-family: "Fira Code", "SF Mono", monospace;
+    font-size: 0.8125rem;
+    line-height: 1.8;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .code-block:hover {
+    opacity: 1;
+  }
+
+  .code-block pre {
+    margin: 0;
+  }
+
+  .code-block code {
+    color: #e0e0e0;
+  }
+
+  .code-keyword {
+    color: #c792ea;
+  }
+
+  .code-variable {
+    color: #82aaff;
+  }
+
+  .code-property {
+    color: #f78c6c;
+  }
+
+  .code-string {
+    color: #c3e88d;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
