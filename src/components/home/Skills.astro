@@ -2,15 +2,19 @@
 const skills = [
   {
     category: "Backend",
-    items: ["C#", ".NET", "Python", "Node.js", "REST APIs", "SQL"],
+    items: ["Go", "Java", "Kotlin", "Spring Boot", "Node.js", "gRPC"],
   },
   {
     category: "Frontend",
-    items: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind", "Astro"],
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "Angular", "Tailwind"],
   },
   {
-    category: "Tools & Infrastructure",
-    items: ["Git", "Docker", "CI/CD", "AWS", "Vercel", "PostgreSQL"],
+    category: "Infrastructure",
+    items: ["Docker", "Kubernetes", "Terraform", "AWS", "Linux", "CI/CD"],
+  },
+  {
+    category: "Data & Observability",
+    items: ["PostgreSQL", "Redis", "Kafka", "Datadog", "Grafana"],
   },
 ];
 ---
@@ -41,11 +45,6 @@ const skills = [
     }
   </div>
 
-  <div class="skills-decoration">
-    <div class="code-block">
-      <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {"{"}<br/>  <span class="code-property">name</span>: <span class="code-string">"Reece Rose"</span>,<br/>  <span class="code-property">role</span>: <span class="code-string">"Full-Stack Developer"</span>,<br/>  <span class="code-property">passions</span>: [<span class="code-string">"clean code"</span>, <span class="code-string">"UX"</span>]<br/>{"}"};</code></pre>
-    </div>
-  </div>
 </section>
 
 <style>
@@ -53,7 +52,6 @@ const skills = [
     padding: 5rem 1.5rem;
     max-width: 72rem;
     margin: 0 auto;
-    position: relative;
   }
 
   .section-header {
@@ -168,60 +166,6 @@ const skills = [
     border-color: #33d2ff;
     color: #33d2ff;
     transform: translateY(-2px);
-  }
-
-  .skills-decoration {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-  }
-
-  @media (min-width: 1200px) {
-    .skills-decoration {
-      display: block;
-    }
-  }
-
-  .code-block {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 1.5rem;
-    font-family: "Fira Code", "SF Mono", monospace;
-    font-size: 0.8125rem;
-    line-height: 1.8;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-
-  .code-block:hover {
-    opacity: 1;
-  }
-
-  .code-block pre {
-    margin: 0;
-  }
-
-  .code-block code {
-    color: #e0e0e0;
-  }
-
-  .code-keyword {
-    color: #c792ea;
-  }
-
-  .code-variable {
-    color: #82aaff;
-  }
-
-  .code-property {
-    color: #f78c6c;
-  }
-
-  .code-string {
-    color: #c3e88d;
   }
 
   @keyframes fadeInUp {
