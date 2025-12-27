@@ -4,28 +4,29 @@ import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/home/Hero.astro";
 import Experience from "@components/home/Experience.astro";
+import Skills from "@components/home/Skills.astro";
 import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 
 const projects = info.projects;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <MetaHead title={"Reece Rose - Portfolio"} description={info.about} />
+    <MetaHead
+      title="Reece Rose - Portfolio"
+      description="Full-stack developer building comprehensive web solutions that seamlessly integrate functionality with captivating design."
+    />
   </head>
 
   <body>
     <Layout>
-      <Hero name={info.name} about={info.about} />
-      <Experience title={"EXPERIENCE"} details={info.experience} />
-      {
-        projects.length > 0 && (
-          <ProjectsWrapper projects={projects} />
-        )
-      }
-      <Experience title={"EDUCATION"} details={info.education} />
+      <Hero />
+      <Experience title="EXPERIENCE" details={info.experience} />
+      <Skills />
+      <ProjectsWrapper projects={projects} />
+      <Experience title="EDUCATION" details={info.education} />
     </Layout>
   </body>
 </html>
