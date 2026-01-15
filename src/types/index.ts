@@ -29,6 +29,7 @@ export interface IProject {
   liveUrl: string;
   description: string;
   tech: ITech[];
+  status?: "coming-soon" | "alpha" | "beta";
 }
 
 export interface ITech {

@@ -1,0 +1,32 @@
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .dot-light { fill: #71717a; opacity: 0.4; }
+    .dot-med { fill: #71717a; opacity: 0.7; }
+    .dot-high { fill: #22c55e; }
+  </style>
+
+  <circle class="dot-light" cx="24" cy="96" r="10" />
+  <circle class="dot-light" cx="48" cy="96" r="10" />
+  <circle class="dot-light" cx="72" cy="96" r="10" />
+  <circle class="dot-light" cx="96" cy="96" r="10" />
+
+  <circle class="dot-light" cx="24" cy="72" r="10" />
+  <circle class="dot-med" cx="48" cy="72" r="10" />
+  <circle class="dot-light" cx="72" cy="72" r="10" />
+  <circle class="dot-light" cx="96" cy="72" r="10" />
+
+  <circle class="dot-light" cx="24" cy="48" r="10" />
+  <circle class="dot-med" cx="48" cy="48" r="10" />
+  <circle class="dot-high" cx="72" cy="48" r="10" />
+  <circle class="dot-light" cx="96" cy="48" r="10" />
+
+  <circle class="dot-light" cx="24" cy="24" r="10" />
+  <circle class="dot-light" cx="48" cy="24" r="10" />
+  <circle class="dot-high" cx="72" cy="24" r="10" />
+  <circle class="dot-high" cx="96" cy="24" r="10" />
+</svg>

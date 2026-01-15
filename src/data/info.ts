@@ -12,7 +12,13 @@ export const info = {
       location: "Kitchener, ON, Canada",
       startDate: "July 2021",
       endDate: "Present",
-      description: [],
+      description: [
+        "✓ Designed and built high-traffic backend services using TypeScript, Node.js, Go, and Kotlin to power smart city and traffic management solutions.",
+        "✓ Led technical initiatives to improve system performance and reduce infrastructure costs.",
+        "✓ Led the software initiative for new hardware products, driving development from concept to release.",
+        "✓ Collaborated across teams to architect scalable data pipelines processing millions of traffic events.",
+        "✓ Mentored team members and drove best practices for backend development and code quality.",
+      ],
     },
     {
       name: "Full-stack Developer",
@@ -48,5 +54,61 @@ export const info = {
     linkedin: "https://www.linkedin.com/in/reece-rose-5b2864116/",
   },
 
-  projects: [],
+  projects: [
+    {
+      title: "QRealtr",
+      thumbnail: "/assets/images/qrealtr.svg",
+      githubUrl: "",
+      liveUrl: "https://www.qrealtr.com/landing",
+      description:
+        "A QR code platform for real estate professionals featuring customizable profiles, property listings, AI-powered importing, and analytics tracking.",
+      tech: [
+        { title: "React", colour: "bg-sky-500" },
+        { title: "TypeScript", colour: "bg-blue-600" },
+        { title: "Next.js", colour: "bg-neutral-800" },
+      ],
+    },
+    {
+      title: "Dotti",
+      thumbnail: "/assets/images/dotti.svg",
+      githubUrl: "",
+      liveUrl: "https://dotti.reecerose.com",
+      description:
+        "A free goal tracking app with GitHub-style contribution charts, streak monitoring, and weekly recaps to help build consistent habits.",
+      tech: [
+        { title: "React", colour: "bg-sky-500" },
+        { title: "TypeScript", colour: "bg-blue-600" },
+        { title: "Next.js", colour: "bg-neutral-800" },
+      ],
+    },
+    {
+      title: "Boop Labs",
+      thumbnail: "/assets/images/boop-labs.svg",
+      githubUrl: "",
+      liveUrl: "https://boop-labs.reecerose.com",
+      description:
+        "An AI-powered platform that transforms pet photos into artistic portraits with 21 art styles, themed collections, and print-quality output.",
+      tech: [
+        { title: "Next.js", colour: "bg-neutral-800" },
+        { title: "Stripe", colour: "bg-purple-600" },
+        { title: "OpenRouter", colour: "bg-emerald-600" },
+      ],
+      status: "alpha",
+    },
+    {
+      title: "Benchwarmer Analytics",
+      thumbnail: "/assets/images/line-chemistry.svg",
+      githubUrl: "",
+      liveUrl: "",
+      description:
+        "A hockey analytics app exploring NHL line combinations, player chemistry, and shot maps. Analysis from the cheap seats.",
+      tech: [
+        { title: ".NET 9", colour: "bg-purple-700" },
+        { title: "React", colour: "bg-sky-500" },
+        { title: "PostgreSQL", colour: "bg-blue-800" },
+        { title: "Azure", colour: "bg-sky-600" },
+      ],
+      status: "coming-soon",
+    },
+  ],
 };

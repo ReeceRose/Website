@@ -1,11 +1,16 @@
 ---
 import type { IProjectDetails } from "@types";
 const { projectDetail } = Astro.props as IProjectDetails;
-const { title, tech, thumbnail, description, liveUrl, githubUrl } = projectDetail;
+const { title, tech, thumbnail, description, liveUrl, githubUrl, status } = projectDetail;
 ---
 
 <article class="project-card">
   <div class="project-image">
+    {status && (
+      <span class={`status-badge status-${status}`}>
+        {status}
+      </span>
+    )}
     <img
       src={thumbnail}
       loading="lazy"
@@ -67,6 +72,35 @@ const { title, tech, thumbnail, description, liveUrl, githubUrl } = projectDetai
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
+  }
+
+  .status-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 10;
+    font-family: "Inter", sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.625rem;
+    border-radius: 6px;
+  }
+
+  .status-alpha {
+    background: rgba(251, 146, 60, 0.9);
+    color: #fff;
+  }
+
+  .status-beta {
+    background: rgba(139, 92, 246, 0.9);
+    color: #fff;
+  }
+
+  .status-coming-soon {
+    background: rgba(107, 114, 128, 0.9);
+    color: #fff;
   }
 
   :global([data-theme="dark"]) .project-card {
