@@ -56,6 +56,35 @@ export const info = {
 
   projects: [
     {
+      title: "Benchwarmer Analytics",
+      thumbnail: "/assets/images/line-chemistry.svg",
+      githubUrl: "",
+      liveUrl: "",
+      description:
+        "A hockey analytics app exploring NHL line combinations, player chemistry, and shot maps. Analysis from the cheap seats.",
+      tech: [
+        { title: ".NET 9", colour: "bg-purple-700" },
+        { title: "React", colour: "bg-sky-500" },
+        { title: "PostgreSQL", colour: "bg-blue-800" },
+        { title: "Azure", colour: "bg-sky-600" },
+      ],
+      status: "coming-soon",
+    }, 
+    {
+      title: "Boop Labs",
+      thumbnail: "/assets/images/boop-labs.svg",
+      githubUrl: "",
+      liveUrl: "https://boop-labs.reecerose.com",
+      description:
+        "An AI-powered platform that transforms pet photos into artistic portraits with 21 art styles, themed collections, and print-quality output.",
+      tech: [
+        { title: "Next.js", colour: "bg-neutral-800" },
+        { title: "Stripe", colour: "bg-purple-600" },
+        { title: "OpenRouter", colour: "bg-emerald-600" },
+      ],
+      status: "alpha",
+    },
+    {
       title: "QRealtr",
       thumbnail: "/assets/images/qrealtr.svg",
       githubUrl: "",
@@ -80,35 +109,6 @@ export const info = {
         { title: "TypeScript", colour: "bg-blue-600" },
         { title: "Next.js", colour: "bg-neutral-800" },
       ],
-    },
-    {
-      title: "Boop Labs",
-      thumbnail: "/assets/images/boop-labs.svg",
-      githubUrl: "",
-      liveUrl: "https://boop-labs.reecerose.com",
-      description:
-        "An AI-powered platform that transforms pet photos into artistic portraits with 21 art styles, themed collections, and print-quality output.",
-      tech: [
-        { title: "Next.js", colour: "bg-neutral-800" },
-        { title: "Stripe", colour: "bg-purple-600" },
-        { title: "OpenRouter", colour: "bg-emerald-600" },
-      ],
-      status: "alpha",
-    },
-    {
-      title: "Benchwarmer Analytics",
-      thumbnail: "/assets/images/line-chemistry.svg",
-      githubUrl: "",
-      liveUrl: "",
-      description:
-        "A hockey analytics app exploring NHL line combinations, player chemistry, and shot maps. Analysis from the cheap seats.",
-      tech: [
-        { title: ".NET 9", colour: "bg-purple-700" },
-        { title: "React", colour: "bg-sky-500" },
-        { title: "PostgreSQL", colour: "bg-blue-800" },
-        { title: "Azure", colour: "bg-sky-600" },
-      ],
-      status: "coming-soon",
     },
   ],
 };
