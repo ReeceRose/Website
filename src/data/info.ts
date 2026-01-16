@@ -57,7 +57,7 @@ export const info = {
   projects: [
     {
       title: "Benchwarmer Analytics",
-      thumbnail: "/assets/images/line-chemistry.svg",
+      thumbnail: "/assets/images/bench-warmer.svg",
       githubUrl: "https://github.com/ReeceRose/benchwarmer-analytics",
       liveUrl: "https://benchwarmer.reecerose.com/",
       description:
