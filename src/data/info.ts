@@ -58,18 +58,18 @@ export const info = {
     {
       title: "Benchwarmer Analytics",
       thumbnail: "/assets/images/line-chemistry.svg",
-      githubUrl: "",
-      liveUrl: "",
+      githubUrl: "https://github.com/ReeceRose/benchwarmer-analytics",
+      liveUrl: "https://benchwarmer.reecerose.com/",
       description:
         "A hockey analytics app exploring NHL line combinations, player chemistry, and shot maps. Analysis from the cheap seats.",
       tech: [
-        { title: ".NET 9", colour: "bg-purple-700" },
+        { title: ".NET 10", colour: "bg-purple-700" },
         { title: "React", colour: "bg-sky-500" },
         { title: "PostgreSQL", colour: "bg-blue-800" },
         { title: "Azure", colour: "bg-sky-600" },
       ],
       status: "coming-soon",
-    }, 
+    },
     {
       title: "Boop Labs",
       thumbnail: "/assets/images/boop-labs.svg",
