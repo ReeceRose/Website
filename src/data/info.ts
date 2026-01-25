@@ -68,7 +68,7 @@ export const info = {
         { title: "PostgreSQL", colour: "bg-blue-800" },
         { title: "Azure", colour: "bg-sky-600" },
       ],
-      status: "coming-soon",
+      status: "alpha",
     },
     {
       title: "Boop Labs",
