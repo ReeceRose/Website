@@ -1,13 +1,12 @@
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import robotsTxt from "astro-robots-txt";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://reecerose.com",
   output: "static",
   integrations: [
-    tailwind(),
     sitemap({
       changefreq: "weekly",
       priority: 0.7,
@@ -16,4 +15,7 @@ export default defineConfig({
     }),
     robotsTxt(),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

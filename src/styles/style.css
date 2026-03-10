@@ -1,9 +1,18 @@
-/* ========== import font source ========== */
-@import "fonts.css";
+@import "tailwindcss";
+@import "./fonts.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (:where([data-theme="dark"]) &);
+
+@theme {
+  --color-dark: #111111;
+  --color-light: #FFFFFF;
+  --color-blue: #33d2ff;
+  --color-gray: #C4C4C4;
+  --color-dark-gray: #1A1A1A;
+
+  --font-inter: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+}
 
 /* ========== Global base styles ========== */
 @layer base {

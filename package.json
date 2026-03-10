@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "@astrojs/sitemap": "3.7.1",
-    "@astrojs/tailwind": "6.0.2",
+    "@tailwindcss/vite": "4.2.1",
+    "tailwindcss": "4.2.1",
     "@biomejs/biome": "2.4.6",
     "astro": "6.0.2",
     "astro-robots-txt": "^1.0.0"
