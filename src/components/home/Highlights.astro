@@ -1,0 +1,90 @@
+---
+import { info } from "@data";
+---
+
+<section class="highlights section" aria-label="Career highlights">
+  <div class="site-container">
+    <div class="highlights-grid">
+      {
+        info.highlights.map((item, i) => (
+          <div class="highlight-card" style={`--delay: ${i * 0.08}s`}>
+            <span class="highlight-index">0{i + 1}</span>
+            <h3 class="highlight-title">{item.title}</h3>
+            <p class="highlight-desc">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .highlights {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  :global([data-theme="dark"]) .highlights-grid {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .highlight-card {
+    background: #fafafa;
+    padding: 1.25rem;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  :global([data-theme="dark"]) .highlight-card {
+    background: #0a0a0a;
+  }
+
+  .highlight-index {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: #33d2ff;
+    margin-bottom: 0.75rem;
+  }
+
+  .highlight-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.5rem;
+  }
+
+  :global([data-theme="dark"]) .highlight-title {
+    color: #fff;
+  }
+
+  .highlight-desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: #666;
+  }
+
+  :global([data-theme="dark"]) .highlight-desc {
+    color: #888;
+  }
+
+  @media (max-width: 768px) {
+    .highlights-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

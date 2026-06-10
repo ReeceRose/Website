@@ -1,7 +1,7 @@
 import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import robotsTxt from "astro-robots-txt";
-import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://reecerose.com",

@@ -4,17 +4,19 @@
 @custom-variant dark (:where([data-theme="dark"]) &);
 
 @theme {
-  --color-dark: #111111;
-  --color-light: #FFFFFF;
+  --color-dark: #0a0a0a;
+  --color-light: #fafafa;
   --color-blue: #33d2ff;
-  --color-gray: #C4C4C4;
-  --color-dark-gray: #1A1A1A;
+  --color-muted: #888888;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-light: rgba(0, 0, 0, 0.08);
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-light: rgba(0, 0, 0, 0.02);
 
   --font-inter: "Inter", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 }
 
-/* ========== Global base styles ========== */
 @layer base {
   *,
   *::before,
@@ -31,17 +33,21 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: var(--font-inter);
+    color: #111;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Default link styles */
+  :where([data-theme="dark"]) body {
+    color: #e5e5e5;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
   }
 
-  /* Remove default list styles */
   ul,
   ol {
     list-style: none;
@@ -49,7 +55,6 @@
     margin: 0;
   }
 
-  /* Default heading styles */
   h1,
   h2,
   h3,
@@ -64,44 +69,99 @@
     margin: 0;
   }
 
-  /* Focus visible styles for accessibility */
   :focus-visible {
     outline: 2px solid #33d2ff;
     outline-offset: 2px;
   }
 
-  /* Selection styles */
   ::selection {
-    background: rgba(51, 210, 255, 0.3);
+    background: rgba(51, 210, 255, 0.25);
     color: inherit;
   }
 }
 
-/* ========== Utility components ========== */
 @layer components {
-  .container {
-    @apply max-w-6xl px-4 mx-auto;
+  .site-container {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-label {
+    font-family: var(--font-inter);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: #33d2ff;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-outfit);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 600;
+    color: #111;
+    letter-spacing: -0.02em;
+  }
+
+  :where([data-theme="dark"]) .section-title {
+    color: #fff;
   }
 
   .text-blue {
     color: #33d2ff;
   }
 
-  /* Gradient text utility */
-  .gradient-text {
-    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-inter);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: #33d2ff;
+    color: #0a0a0a;
+  }
+
+  .btn-primary:hover {
+    background: #5cddff;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #555;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  :where([data-theme="dark"]) .btn-ghost {
+    color: #ccc;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-ghost:hover {
+    border-color: #33d2ff;
+    color: #33d2ff;
   }
 }
 
-/* ========== Custom animations ========== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -115,15 +175,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes gradient {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
   }
 }

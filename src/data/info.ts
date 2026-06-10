@@ -1,10 +1,33 @@
 export const info = {
   baseUrl: "https://reecerose.com",
   name: "Reece Rose",
-  jobDescription: "Full-stack Developer",
-  about: `
-  As a versatile software developer, my expertise spans both backend and frontend development, enabling me to architect comprehensive web solutions that seamlessly integrate functionality with captivating design. While my core proficiency lies in backend development, I've honed my frontend skills to ensure a holistic approach to crafting compelling user experiences.
-  I'm particularly passionate about exploring new technologies, often incorporating them into my side projects to stay at the forefront of innovation. Driven by a fervent passion for technology and an innate sense of design, I am committed to engineering immersive user experiences that captivate and inspire. With each project, I harmonize technical prowess with creative finesse, ensuring that every facet of the software ecosystem aligns to deliver exceptional results.`,
+  jobTitle: "Software Engineer",
+  jobContext: "Miovision",
+  tagline:
+    "Backend engineer working in Go, Java, and TypeScript — building high-traffic services by day, side projects by night.",
+  availability: "Open to senior backend & platform roles",
+  about: `I'm a software engineer with 5+ years of experience, focused on backend development and distributed systems. At Miovision, I design high-traffic services in Go, Java/Kotlin, and TypeScript that power smart city infrastructure.
+
+Outside of work, I build full products from scratch — mostly with JavaScript and React, though I'll reach for .NET when a side project calls for it. I care about writing code that's fast, observable, and easy for teams to maintain.`,
+
+  highlights: [
+    {
+      title: "Scale",
+      description:
+        "Architected data pipelines and backend services processing millions of traffic events for smart city infrastructure.",
+    },
+    {
+      title: "Leadership",
+      description:
+        "Led a hardware product initiative from concept to release and mentored engineers on backend best practices.",
+    },
+    {
+      title: "Full product builder",
+      description:
+        "Ship side projects end-to-end — React and Next.js frontends, Node APIs, Stripe billing, and the occasional .NET experiment.",
+    },
+  ],
+
   experience: [
     {
       name: "Software Developer",
@@ -12,12 +35,22 @@ export const info = {
       location: "Kitchener, ON, Canada",
       startDate: "July 2021",
       endDate: "Present",
+      tech: [
+        "Go",
+        "Java",
+        "TypeScript",
+        "Node.js",
+        "Kotlin",
+        "PostgreSQL",
+        "Kafka",
+        "Kubernetes",
+      ],
       description: [
-        "✓ Designed and built high-traffic backend services using TypeScript, Node.js, Go, and Kotlin to power smart city and traffic management solutions.",
-        "✓ Led technical initiatives to improve system performance and reduce infrastructure costs.",
-        "✓ Led the software initiative for new hardware products, driving development from concept to release.",
-        "✓ Collaborated across teams to architect scalable data pipelines processing millions of traffic events.",
-        "✓ Mentored team members and drove best practices for backend development and code quality.",
+        "Designed and built high-traffic backend services in Go, Java/Kotlin, and TypeScript for smart city infrastructure.",
+        "Led technical initiatives to improve system performance and reduce infrastructure costs.",
+        "Led the software initiative for new hardware products, driving development from concept to release.",
+        "Architected scalable data pipelines processing millions of traffic events.",
+        "Mentored team members and drove best practices for backend development and code quality.",
       ],
     },
     {
@@ -26,26 +59,40 @@ export const info = {
       location: "Kitchener, ON, Canada",
       startDate: "January 2020",
       endDate: "July 2021",
+      tech: ["JavaScript", "React", "TypeScript", "Python"],
       description: [
-        "✓ Implemented innovative features for 3 products using a combination of C#, Knockout, React.JS, and Python technologies.",
-        "✓ Successfully ported hardware changes to a new platform.",
-        "✓ Provided technical support to ensure seamless operation for clients.",
-        "✓ Collaborated with cross-functional teams to deliver high-quality products through the entire software development life cycle.",
+        "Implemented features across 3 products using JavaScript, React, and Python.",
+        "Ported hardware changes to a new platform.",
+        "Provided technical support and collaborated across teams through the full SDLC.",
       ],
     },
   ],
 
-  education: [
-    {
-      name: "Software Development (Co-op Program)",
-      company: "Sheridan College",
-      location: "Oakville, ON, Canada",
-      startDate: "September 2016",
-      endDate: "December 2019",
-      description: [
-        "Advanced Diploma of Computer Systems Technology – Information Systems Engineering",
-      ],
-    },
+  education: {
+    degree: "Advanced Diploma, Computer Systems Technology",
+    school: "Sheridan College",
+    program: "Software Development (Co-op)",
+    location: "Oakville, ON, Canada",
+    dates: "2016 — 2019",
+  },
+
+  skills: [
+    "Go",
+    "Java",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Kotlin",
+    "React",
+    "Next.js",
+    "PostgreSQL",
+    "Kafka",
+    "Redis",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
+    "Datadog",
   ],
 
   socialMedia: {
@@ -61,14 +108,15 @@ export const info = {
       githubUrl: "https://github.com/ReeceRose/benchwarmer-analytics",
       liveUrl: "https://benchwarmer.reecerose.com/",
       description:
-        "A hockey analytics app exploring NHL line combinations, player chemistry, and shot maps. Analysis from the cheap seats.",
+        "A hockey analytics platform exploring NHL line combinations, player chemistry, and shot maps. Side project built with a .NET API, React, and PostgreSQL on Azure.",
       tech: [
         { title: ".NET 10", colour: "bg-purple-700" },
         { title: "React", colour: "bg-sky-500" },
         { title: "PostgreSQL", colour: "bg-blue-800" },
         { title: "Azure", colour: "bg-sky-600" },
       ],
-      status: "alpha",
+      status: "alpha" as const,
+      featured: true,
     },
     {
       title: "Boop Labs",
@@ -76,13 +124,14 @@ export const info = {
       githubUrl: "",
       liveUrl: "https://boop-labs.reecerose.com",
       description:
-        "An AI-powered platform that transforms pet photos into artistic portraits with 21 art styles, themed collections, and print-quality output.",
+        "An AI-powered platform that transforms pet photos into artistic portraits with 21 art styles, themed collections, and print-quality output. Handles payments via Stripe.",
       tech: [
         { title: "Next.js", colour: "bg-neutral-800" },
         { title: "Stripe", colour: "bg-purple-600" },
         { title: "OpenRouter", colour: "bg-emerald-600" },
       ],
-      status: "alpha",
+      status: "alpha" as const,
+      featured: true,
     },
     {
       title: "QRealtr",
@@ -90,7 +139,7 @@ export const info = {
       githubUrl: "",
       liveUrl: "https://www.qrealtr.com/landing",
       description:
-        "A QR code platform for real estate professionals featuring customizable profiles, property listings, AI-powered importing, and analytics tracking.",
+        "A QR code platform for real estate professionals with customizable profiles, property listings, AI-powered importing, and analytics.",
       tech: [
         { title: "React", colour: "bg-sky-500" },
         { title: "TypeScript", colour: "bg-blue-600" },
@@ -103,7 +152,7 @@ export const info = {
       githubUrl: "",
       liveUrl: "https://dotti.reecerose.com",
       description:
-        "A free goal tracking app with GitHub-style contribution charts, streak monitoring, and weekly recaps to help build consistent habits.",
+        "A goal tracking app with GitHub-style contribution charts, streak monitoring, and weekly recaps.",
       tech: [
         { title: "React", colour: "bg-sky-500" },
         { title: "TypeScript", colour: "bg-blue-600" },

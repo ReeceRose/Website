@@ -11,38 +11,24 @@ import "../styles/style.css";
 </main>
 <Footer />
 
-<script>
-  // Theme detection and persistence
-  const theme = (() => {
-    if (
-      typeof localStorage !== "undefined" &&
-      localStorage.getItem("theme")
-    ) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
+<script is:inline>
+  (function () {
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = stored || (prefersDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
   })();
+</script>
 
-  if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-  window.localStorage.setItem("theme", theme ?? "dark");
-
-  // Smooth scroll for anchor links
+<script>
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
+    anchor.addEventListener("click", (e) => {
+      const href = anchor.getAttribute("href");
+      if (!href || href === "#") return;
+      const target = document.querySelector(href);
       if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });

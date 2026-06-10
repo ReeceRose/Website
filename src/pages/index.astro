@@ -1,31 +1,32 @@
 ---
 import MetaHead from "@components/general/MetaHead.astro";
 import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
+import About from "@components/home/About.astro";
+import Contact from "@components/home/Contact.astro";
 import Experience from "@components/home/Experience.astro";
 import Hero from "@components/home/Hero.astro";
-import Skills from "@components/home/Skills.astro";
+import Highlights from "@components/home/Highlights.astro";
 import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
-
-const projects = info.projects;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <MetaHead
-      title="Reece Rose - Portfolio"
-      description="Full-stack developer building comprehensive web solutions that seamlessly integrate functionality with captivating design."
+      title="Portfolio"
+      description="Software engineer working in Go, Java, and TypeScript. Backend systems at scale, plus side projects from API to UI."
     />
   </head>
 
   <body>
     <Layout>
       <Hero />
-      <Experience title="EXPERIENCE" details={info.experience} />
-      <ProjectsWrapper projects={projects} />
-      <Skills />
-      <Experience title="EDUCATION" details={info.education} />
+      <Highlights />
+      <Experience details={info.experience} />
+      <ProjectsWrapper projects={info.projects} />
+      <About />
+      <Contact />
     </Layout>
   </body>
 </html>

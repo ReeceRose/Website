@@ -1,12 +1,12 @@
 export interface IMetaHead {
   title: string;
   description: string;
-  ogImageUrl: string;
+  ogImageUrl?: string;
 }
 
-export interface IHeroProps {
-  name: string;
-  about: string;
+export interface IHighlight {
+  title: string;
+  description: string;
 }
 
 export interface IExperience {
@@ -16,9 +16,10 @@ export interface IExperience {
   startDate: string;
   endDate: string;
   description: string[];
+  tech?: string[];
 }
+
 export interface IExperiences {
-  title: string;
   details: IExperience[];
 }
 
@@ -30,6 +31,7 @@ export interface IProject {
   description: string;
   tech: ITech[];
   status?: "coming-soon" | "alpha" | "beta";
+  featured?: boolean;
 }
 
 export interface ITech {

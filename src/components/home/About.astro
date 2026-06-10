@@ -1,0 +1,105 @@
+---
+import { info } from "@data";
+---
+
+<section class="about section" id="about">
+  <div class="site-container">
+    <header class="section-header">
+      <p class="section-label">03. About</p>
+      <h2 class="section-title">A bit more about me</h2>
+    </header>
+
+    <div class="about-content">
+      {
+        info.about.split("\n\n").map((paragraph) => (
+          <p class="about-text">{paragraph.trim()}</p>
+        ))
+      }
+    </div>
+
+    <div class="skills-strip">
+      <p class="skills-label">Technologies I work with</p>
+      <ul class="skills-list">
+        {info.skills.map((skill) => <li>{skill}</li>)}
+      </ul>
+    </div>
+
+    <p class="education-line">
+      {info.education.degree} · {info.education.school} · {info.education.dates}
+    </p>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content {
+    max-width: 38rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  :global([data-theme="dark"]) .about-text {
+    color: #aaa;
+  }
+
+  .skills-strip {
+    padding: 1.25rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+  }
+
+  :global([data-theme="dark"]) .skills-strip {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .skills-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+
+  .skills-list li {
+    font-size: 0.875rem;
+    color: #555;
+  }
+
+  :global([data-theme="dark"]) .skills-list li {
+    color: #999;
+  }
+
+  .skills-list li::before {
+    content: "·";
+    color: #33d2ff;
+    margin-right: 0.5rem;
+  }
+
+  .education-line {
+    font-size: 0.8125rem;
+    color: #888;
+  }
+
+  :global([data-theme="dark"]) .education-line {
+    color: #666;
+  }
+</style>

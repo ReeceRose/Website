@@ -1,0 +1,77 @@
+---
+import { info } from "@data";
+---
+
+<section class="contact section" id="contact">
+  <div class="site-container">
+    <div class="contact-inner">
+      <header>
+        <p class="section-label">04. Contact</p>
+        <h2 class="section-title">Let's connect</h2>
+        <p class="contact-sub">
+          {info.availability}. Reach out if you'd like to talk about a role,
+          a project, or just say hi.
+        </p>
+      </header>
+
+      <div class="contact-actions">
+        <a href={info.socialMedia.email} class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Send an email
+        </a>
+        <a href={info.socialMedia.linkedin} target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          LinkedIn
+        </a>
+        <a href={info.socialMedia.github} target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding-bottom: 2rem;
+  }
+
+  .contact-inner {
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    background: rgba(51, 210, 255, 0.03);
+  }
+
+  :global([data-theme="dark"]) .contact-inner {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(51, 210, 255, 0.04);
+  }
+
+  .contact-sub {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #555;
+    margin-top: 0.75rem;
+    max-width: 32rem;
+  }
+
+  :global([data-theme="dark"]) .contact-sub {
+    color: #999;
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .contact-inner {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

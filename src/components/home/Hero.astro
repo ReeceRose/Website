@@ -3,346 +3,129 @@ import { info } from "@data";
 ---
 
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      Available for opportunities
-    </div>
+  <div class="site-container">
+    <div class="hero-inner">
+      <p class="hero-status">
+        <span class="status-dot"></span>
+        {info.availability}
+      </p>
 
-    <h1 class="hero-title">
-      <span class="hero-greeting">Hey, I'm</span>
-      <span class="hero-name">{info.name}</span>
-    </h1>
+      <h1 class="hero-name">{info.name}</h1>
 
-    <p class="hero-role">{info.jobDescription}</p>
+      <p class="hero-role">
+        {info.jobTitle} at <span class="role-company">{info.jobContext}</span>
+      </p>
 
-    <p class="hero-about">
-      I build comprehensive web solutions that seamlessly integrate functionality
-      with captivating design. Passionate about exploring new technologies and
-      engineering immersive user experiences.
-    </p>
+      <p class="hero-tagline">{info.tagline}</p>
 
-    <div class="hero-actions">
-      <a href="#experience" class="btn-primary">
-        View my work
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M7 17L17 7M17 7H7M17 7V17"/>
-        </svg>
-      </a>
-      <a href={info.socialMedia.email} class="btn-secondary">
-        Get in touch
-      </a>
-    </div>
-
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-value">5+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      {info.projects.length > 0 && (
-        <>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-value">{info.projects.length}</span>
-            <span class="stat-label">Projects</span>
-          </div>
-        </>
-      )}
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-value">Full-Stack</span>
-        <span class="stat-label">Expertise</span>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">
+          View experience
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </a>
+        <a href={info.socialMedia.github} target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          GitHub
+        </a>
+        <a href={info.socialMedia.linkedin} target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          LinkedIn
+        </a>
       </div>
     </div>
-  </div>
-
-  <div class="hero-decoration">
-    <div class="decoration-circle decoration-1"></div>
-    <div class="decoration-circle decoration-2"></div>
-    <div class="decoration-circle decoration-3"></div>
   </div>
 </section>
 
 <style>
   .hero {
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 8rem 1.5rem 4rem;
-    position: relative;
-    overflow: hidden;
+    padding: 5.5rem 0 2rem;
   }
 
-  .hero-content {
-    max-width: 48rem;
-    position: relative;
-    z-index: 10;
+  .hero-inner {
+    max-width: 40rem;
+    animation: fadeInUp 0.7s ease forwards;
   }
 
-  .hero-badge {
+  .hero-status {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(51, 210, 255, 0.1);
-    border: 1px solid rgba(51, 210, 255, 0.2);
-    border-radius: 9999px;
-    font-family: "Inter", sans-serif;
-    font-size: 0.875rem;
-    color: #33d2ff;
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.6s ease forwards;
-  }
-
-  .badge-dot {
-    width: 8px;
-    height: 8px;
-    background: #10b981;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.1); }
-  }
-
-  .hero-title {
+    font-size: 0.8125rem;
+    color: #666;
     margin-bottom: 1rem;
   }
 
-  .hero-greeting {
-    display: block;
-    font-family: "Inter", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #666;
-    margin-bottom: 0.5rem;
-    animation: fadeInUp 0.6s ease 0.1s forwards;
-    opacity: 0;
+  :global([data-theme="dark"]) .hero-status {
+    color: #888;
   }
 
-  :global([data-theme="dark"]) .hero-greeting {
-    color: #999;
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    background: #10b981;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
   .hero-name {
-    display: block;
     font-family: "Outfit", sans-serif;
-    font-size: clamp(3rem, 10vw, 5rem);
+    font-size: clamp(2.75rem, 8vw, 4.5rem);
     font-weight: 700;
-    line-height: 1.1;
-    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: fadeInUp 0.6s ease 0.2s forwards, gradient 8s ease infinite;
-    opacity: 0;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: #111;
+    margin-bottom: 0.5rem;
   }
 
-  @keyframes gradient {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+  :global([data-theme="dark"]) .hero-name {
+    color: #fff;
   }
 
   .hero-role {
-    font-family: "Outfit", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #33d2ff;
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 0.6s ease 0.3s forwards;
-    opacity: 0;
-  }
-
-  .hero-about {
-    font-family: "Inter", sans-serif;
     font-size: 1.125rem;
-    line-height: 1.75;
     color: #555;
-    max-width: 36rem;
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.6s ease 0.4s forwards;
-    opacity: 0;
+    margin-bottom: 0.75rem;
   }
 
-  :global([data-theme="dark"]) .hero-about {
+  :global([data-theme="dark"]) .hero-role {
+    color: #999;
+  }
+
+  .role-company {
+    color: #33d2ff;
+    font-weight: 500;
+  }
+
+  .hero-tagline {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.5rem;
+    max-width: 34rem;
+  }
+
+  :global([data-theme="dark"]) .hero-tagline {
     color: #aaa;
   }
 
   .hero-actions {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    animation: fadeInUp 0.6s ease 0.5s forwards;
-    opacity: 0;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
 
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.5rem;
-    background: linear-gradient(135deg, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
-    background-size: 200% 200%;
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-primary:hover {
-    background-position: 100% 0;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(51, 210, 255, 0.3);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.5rem;
-    background: transparent;
-    border: 1px solid #ddd;
-    color: #333;
-    font-family: "Inter", sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  :global([data-theme="dark"]) .btn-secondary {
-    border-color: #333;
-    color: #fff;
-  }
-
-  .btn-secondary:hover {
-    border-color: #33d2ff;
-    color: #33d2ff;
-    transform: translateY(-2px);
-  }
-
-  .hero-stats {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    animation: fadeInUp 0.6s ease 0.6s forwards;
-    opacity: 0;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .stat-value {
-    font-family: "Outfit", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #111;
-  }
-
-  :global([data-theme="dark"]) .stat-value {
-    color: #fff;
-  }
-
-  .stat-label {
-    font-family: "Inter", sans-serif;
-    font-size: 0.875rem;
-    color: #666;
-  }
-
-  :global([data-theme="dark"]) .stat-label {
-    color: #888;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 2.5rem;
-    background: #ddd;
-  }
-
-  :global([data-theme="dark"]) .stat-divider {
-    background: #333;
-  }
-
-  .hero-decoration {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  .decoration-circle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;
-  }
-
-  .decoration-1 {
-    width: 400px;
-    height: 400px;
-    background: #9845e8;
-    top: -100px;
-    right: -100px;
-  }
-
-  .decoration-2 {
-    width: 300px;
-    height: 300px;
-    background: #33d2ff;
-    bottom: 10%;
-    left: -50px;
-  }
-
-  .decoration-3 {
-    width: 200px;
-    height: 200px;
-    background: #dd5789;
-    bottom: 20%;
-    right: 20%;
-  }
-
-  :global([data-theme="dark"]) .decoration-circle {
-    opacity: 0.15;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 640px) {
+  @media (max-width: 480px) {
     .hero {
+      min-height: auto;
       padding-top: 6rem;
-    }
-
-    .hero-stats {
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .stat-divider {
-      display: none;
     }
 
     .hero-actions {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 </style>
