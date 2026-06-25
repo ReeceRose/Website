@@ -35,16 +35,7 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
       location: "Kitchener, ON, Canada",
       startDate: "July 2021",
       endDate: "Present",
-      tech: [
-        "Go",
-        "Java",
-        "TypeScript",
-        "Node.js",
-        "Kotlin",
-        "PostgreSQL",
-        "Kafka",
-        "Kubernetes",
-      ],
+      tech: ["Go", "Java", "TypeScript", "Node.js", "Kotlin", "PostgreSQL", "Kafka", "Kubernetes"],
       description: [
         "Designed and built high-traffic backend services in Go, Java/Kotlin, and TypeScript for smart city infrastructure.",
         "Led technical initiatives to improve system performance and reduce infrastructure costs.",
@@ -102,6 +93,21 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
   },
 
   projects: [
+    {
+      title: "Reclaim",
+      thumbnail: "/assets/images/reclaim.svg",
+      githubUrl: "https://github.com/reecerose/reclaim",
+      liveUrl: "https://reclaim.reecerose.com/",
+      description:
+        "Self-hosted codec audit and re-encode tool for homelabs. Scans Plex, Jellyfin, and Emby media folders, ranks files by predicted HEVC savings, and queues overnight ffmpeg jobs — single Docker container, no external database.",
+      tech: [
+        { title: "Go", colour: "bg-cyan-600" },
+        { title: "Next.js", colour: "bg-neutral-800" },
+        { title: "Docker", colour: "bg-blue-600" },
+        { title: "SQLite", colour: "bg-slate-600" },
+      ],
+      featured: true,
+    },
     {
       title: "Benchwarmer Analytics",
       thumbnail: "/assets/images/bench-warmer.svg",
