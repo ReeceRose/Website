@@ -3,8 +3,6 @@ import type { IProjects } from "@types";
 import ProjectCard from "./ProjectCard.astro";
 
 const { projects } = Astro.props as IProjects;
-const featured = projects.filter((p) => p.featured);
-const rest = projects.filter((p) => !p.featured);
 ---
 
 <section class="projects section" id="projects">
@@ -17,29 +15,15 @@ const rest = projects.filter((p) => !p.featured);
       </p>
     </header>
 
-    {
-      featured.length > 0 && (
-        <div class="featured-grid">
-          {featured.map((project, index) => (
-            <div class="featured-wrapper" style={`--delay: ${index * 0.1}s`}>
-              <ProjectCard projectDetail={project} variant="featured" />
-            </div>
-          ))}
-        </div>
-      )
-    }
-
-    {
-      rest.length > 0 && (
-        <div class="projects-grid">
-          {rest.map((project, index) => (
-            <div class="project-wrapper" style={`--delay: ${(index + featured.length) * 0.08}s`}>
-              <ProjectCard projectDetail={project} variant="default" />
-            </div>
-          ))}
-        </div>
-      )
-    }
+    <div class="projects-grid">
+      {
+        projects.map((project, index) => (
+          <div class="project-wrapper" style={`--delay: ${index * 0.08}s`}>
+            <ProjectCard projectDetail={project} />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
 
@@ -59,28 +43,21 @@ const rest = projects.filter((p) => !p.featured);
     color: #888;
   }
 
-  .featured-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .featured-wrapper,
   .project-wrapper {
     opacity: 0;
     animation: fadeInUp 0.5s ease forwards;
     animation-delay: var(--delay);
+    display: flex;
+    flex-direction: column;
   }
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
   @media (max-width: 768px) {
-    .featured-grid,
     .projects-grid {
       grid-template-columns: 1fr;
     }

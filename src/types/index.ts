@@ -31,7 +31,6 @@ export interface IProject {
   description: string;
   tech: ITech[];
   status?: "coming-soon" | "alpha" | "beta";
-  featured?: boolean;
 }
 
 export interface ITech {

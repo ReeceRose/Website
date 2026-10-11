@@ -106,7 +106,6 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
         { title: "Docker", colour: "bg-blue-600" },
         { title: "SQLite", colour: "bg-slate-600" },
       ],
-      featured: true,
     },
     {
       title: "Benchwarmer Analytics",
@@ -122,7 +121,6 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
         { title: "Azure", colour: "bg-sky-600" },
       ],
       status: "alpha" as const,
-      featured: true,
     },
     {
       title: "Boop Labs",
@@ -137,7 +135,6 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
         { title: "OpenRouter", colour: "bg-emerald-600" },
       ],
       status: "alpha" as const,
-      featured: true,
     },
     {
       title: "QRealtr",
