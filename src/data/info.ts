@@ -113,12 +113,12 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
       githubUrl: "https://github.com/ReeceRose/benchwarmer-analytics",
       liveUrl: "https://benchwarmer.reecerose.com/",
       description:
-        "A hockey analytics platform exploring NHL line combinations, player chemistry, and shot maps. Side project built with a .NET API, React, and PostgreSQL on Azure.",
+        "A hockey analytics platform exploring NHL line combinations, player chemistry, shot maps, and expected goals. Ingests MoneyPuck and NHL API data nightly into serverless Postgres, served through TanStack Start on Vercel.",
       tech: [
-        { title: ".NET 10", colour: "bg-purple-700" },
-        { title: "React", colour: "bg-sky-500" },
-        { title: "PostgreSQL", colour: "bg-blue-800" },
-        { title: "Azure", colour: "bg-sky-600" },
+        { title: "TanStack Start", colour: "bg-amber-600" },
+        { title: "TypeScript", colour: "bg-blue-600" },
+        { title: "Neon Postgres", colour: "bg-emerald-600" },
+        { title: "Vercel", colour: "bg-neutral-800" },
       ],
       status: "alpha" as const,
     },
