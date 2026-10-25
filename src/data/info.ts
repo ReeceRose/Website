@@ -94,6 +94,34 @@ Outside of work, I build full products from scratch — mostly with JavaScript a
 
   projects: [
     {
+      title: "Flyerwatch",
+      thumbnail: "/assets/images/flyerwatch.svg",
+      githubUrl: "https://github.com/ReeceRose/flyerwatch",
+      liveUrl: "https://flyerwatch.reecerose.com/",
+      description:
+        "Compares this week's grocery flyer prices near you, sorted by lowest price or price per pound. A Chrome extension parses the ingredients from any recipe page, matches them against current deals, and builds a shopping list that picks the cheapest stores to visit.",
+      tech: [
+        { title: "Next.js", colour: "bg-neutral-800" },
+        { title: "TypeScript", colour: "bg-blue-600" },
+        { title: "Tailwind CSS", colour: "bg-sky-500" },
+        { title: "Chrome Extension", colour: "bg-amber-600" },
+      ],
+    },
+    {
+      title: "Tastebase",
+      thumbnail: "/assets/images/tastebase.svg",
+      githubUrl: "https://github.com/ReeceRose/tastebase",
+      liveUrl: "",
+      description:
+        "A local-first, self-hosted recipe manager for a household. Import recipes from a link, pasted text, or a photo of a cookbook page, with optional AI cleanup through OpenAI, Anthropic, Google, or a local Ollama model. Includes cook mode, scaling, and unit conversion, shipped as a single Docker image.",
+      tech: [
+        { title: "Next.js", colour: "bg-neutral-800" },
+        { title: "AI SDK", colour: "bg-emerald-600" },
+        { title: "SQLite", colour: "bg-slate-600" },
+        { title: "Docker", colour: "bg-blue-600" },
+      ],
+    },
+    {
       title: "Reclaim",
       thumbnail: "/assets/images/reclaim.svg",
       githubUrl: "https://github.com/reecerose/reclaim",
